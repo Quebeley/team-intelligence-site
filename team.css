@@ -30,4 +30,4 @@ main{max-width:1440px}.hero{padding-block:42px 35px}.intro{max-width:66ch}.metri
 .panel .eyebrow{font-size:11px}.source-card h3{font-size:16px}.source-card p{font-size:13px}
 .filters label{font-size:12px}.filters input,.filters select{font-size:14px}
 .brief-body{font-size:16px}.run{font-size:14px}footer{font-size:12px}
-@media(max-width:600px){nav a{font-size:14px}h2{font-size:24px}.card h3{font-size:18px}.brief-body{font-size:15px}.topic-tabs button{font-size:13px}}
+@media(max-width:600px){header nav{flex-wrap:nowrap}header nav a{font-size:14px}h2{font-size:24px}.card h3{font-size:18px}.brief-body{font-size:15px}.topic-tabs button{font-size:13px}}
