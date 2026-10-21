@@ -92,7 +92,20 @@ $('topic').innerHTML+='<option disabled>────────</option>'+data.
 $('source-list').innerHTML=data.sources.map(s=>`<article class="source-card"><h3>${anchor(s.url,s.name+' ↗')}</h3><p>${esc(s.access)}</p></article>`).join('');
 $('run-list').innerHTML=data.runs.length?data.runs.map(r=>`<div class="run"><b>${esc(r.started_at)} UTC</b><p>Fetched ${r.counts.fetched||0} · Scored ${r.counts.scored||0} · Included ${r.counts.included||0} · Cached ${r.counts.cached||0}</p>${r.errors.length?'<ul>'+r.errors.map(e=>`<li>${esc(e)}</li>`).join('')+'</ul>':'No reported errors.'}</div>`).join(''):empty('No collection history yet.','Run the collector to record source availability and processing results.');
 document.querySelectorAll('#run-list .run').forEach((el,i)=>el.insertAdjacentHTML('afterbegin',`<p>${esc(runLabel(data.runs[i]))}</p>`));
-function briefHTML(text){return esc(text).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,(_,title,url)=>anchor(url.replaceAll('&amp;','&'),title.replaceAll('&amp;','&'))).replace(/^###? (.+)$/gm,'<h3>$1</h3>');}
+function briefHTML(text){
+ const inline=value=>esc(value).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,(_,title,url)=>anchor(url.replaceAll('&amp;','&'),title.replaceAll('&amp;','&'))).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+ const output=[];let list='';
+ const close=()=>{if(list){output.push(`</${list}>`);list='';}};
+ for(const raw of String(text||'').split(/\r?\n/)){
+  const line=raw.trim();if(!line){close();continue;}
+  const heading=line.match(/^#{2,3}\s+(.+)$/);
+  if(heading){close();output.push(`<h3>${inline(heading[1])}</h3>`);continue;}
+  const bullet=line.match(/^[-*]\s+(.+)$/),number=line.match(/^\d+\.\s+(.+)$/);
+  if(bullet||number){const kind=bullet?'ul':'ol';if(list!==kind){close();output.push(`<${kind}>`);list=kind;}output.push(`<li>${inline((bullet||number)[1])}</li>`);continue;}
+  close();output.push(`<p>${inline(line)}</p>`);
+ }
+ close();return output.join('');
+}
 function renderBriefs(){
  $('brief-topics').innerHTML=[['','All tracks'],...Object.entries(names)].map(([id,name])=>`<button data-track="${esc(id)}" class="${briefTrack===id?'selected':''}" aria-pressed="${briefTrack===id}">${esc(name)}</button>`).join('');
  $('brief-topics').querySelectorAll('button').forEach(b=>b.onclick=()=>{briefTrack=b.dataset.track;renderBriefs();});
