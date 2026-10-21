@@ -24,10 +24,10 @@
   if(remote && !authorization){el('chat-status').textContent='Sign in to use research chat.';el('chat-login').hidden=false;controls();return;}
   try{const r=await fetch(api+'/api/status',{headers:headers()});if(!r.ok)throw new Error(r.status===401?'Incorrect username or password.':'Chat service unavailable.');
    const state=await r.json();token=state.csrf;ready=state.ready;
-   el('chat-status').textContent=ready?'Connected · stored collection only':'Connected. Add your DeepSeek key to start chatting.';
-   el('chat-login').hidden=true;el('chat-logout').hidden=!remote;el('chat-setup').hidden=false;el('chat-setup').open=!ready;
+   el('chat-status').textContent=ready?'Connected · ready to answer':'Chat is temporarily unavailable. Contact the administrator.';
+   el('chat-login').hidden=true;el('chat-logout').hidden=!remote;
   }catch(e){ready=false;token='';el('chat-status').textContent=e.message||'Chat service unavailable.';
-   el('chat-login').hidden=!remote;el('chat-logout').hidden=true;el('chat-setup').hidden=true;}
+   el('chat-login').hidden=!remote;el('chat-logout').hidden=true;}
   controls();
  }
  el('chat-login').addEventListener('submit',async e=>{e.preventDefault();
@@ -57,10 +57,6 @@
   el('chat-messages').append(box);
   return (result.claims||[]).map(c=>c.text).join('\n')+'\n'+(result.limitations||[]).join('\n');
  }
- el('chat-key-form').addEventListener('submit',async e=>{e.preventDefault();el('chat-key-save').disabled=true;el('chat-key-status').textContent='Connecting…';
-  try{await request('/api/settings',{key:el('chat-key').value});el('chat-key').value='';el('chat-key-status').textContent='Key configured for this server session.';await status();el('chat-setup').open=false;}
-  catch(e){el('chat-key-status').textContent=e.message;}finally{el('chat-key-save').disabled=false;}
- });
  el('chat-form').addEventListener('submit',async e=>{e.preventDefault();const question=el('chat-question').value.trim();if(!question||busy||!ready)return;
   error('');busy=true;controls();document.querySelector('.chat-welcome')?.remove();
   const questionBox=node('article',null,'chat-question');questionBox.append(node('p','YOU','eyebrow'),node('p',question));el('chat-messages').append(questionBox);
