@@ -20103,6 +20103,60 @@
   ],
   "runs": [
     {
+      "id": 12,
+      "started_at": "2026-10-21 21:16:13",
+      "finished_at": "2026-10-21 21:16:13",
+      "counts": {
+        "briefs_generated": 7,
+        "errors": 0,
+        "mode": "briefs_only"
+      },
+      "errors": [],
+      "token_usage": {
+        "research service_digest": {
+          "completion_tokens": 1466,
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 13309,
+          "prompt_tokens": 13693,
+          "total_tokens": 15159
+        },
+        "research service_topic_digest": {
+          "completion_tokens": 5805,
+          "prompt_cache_hit_tokens": 9596,
+          "prompt_cache_miss_tokens": 12914,
+          "prompt_tokens": 22510,
+          "total_tokens": 28315
+        }
+      }
+    },
+    {
+      "id": 11,
+      "started_at": "2026-10-21 21:14:10",
+      "finished_at": "2026-10-21 21:14:10",
+      "counts": {
+        "briefs_generated": 7,
+        "errors": 0,
+        "mode": "briefs_only"
+      },
+      "errors": [],
+      "token_usage": {
+        "research service_digest": {
+          "completion_tokens": 1519,
+          "prompt_cache_hit_tokens": 768,
+          "prompt_cache_miss_tokens": 13832,
+          "prompt_tokens": 14600,
+          "total_tokens": 16119
+        },
+        "research service_topic_digest": {
+          "completion_tokens": 5163,
+          "prompt_cache_hit_tokens": 22140,
+          "prompt_cache_miss_tokens": 1814,
+          "prompt_tokens": 23954,
+          "total_tokens": 29117
+        }
+      }
+    },
+    {
       "id": 10,
       "started_at": "2026-10-21 20:39:37",
       "finished_at": "2026-10-21 20:39:37",
@@ -20461,62 +20515,65 @@
         "research service: research service_API_KEY not configured; captured sources remain pending, no synthetic scores published"
       ],
       "token_usage": {}
-    },
-    {
-      "id": 2,
-      "started_at": "2026-10-20 20:22:04",
-      "finished_at": "2026-10-20 20:22:04",
-      "counts": {
-        "cached": 0,
-        "candidates": 63,
-        "errors": 3,
-        "fetched": 333,
-        "included": 0,
-        "model_failures": 0,
-        "scored": 0,
-        "unique_fetched": 330
-      },
-      "errors": [
-        "google_patents: patent search service_API_KEY not configured; source skipped",
-        "web_search: patent search service_API_KEY not configured; source skipped",
-        "research service: research service_API_KEY not configured; captured sources remain pending, no synthetic scores published"
-      ],
-      "token_usage": {}
-    },
-    {
-      "id": 1,
-      "started_at": "2026-10-20 20:17:14",
-      "finished_at": "2026-10-20 20:17:14",
-      "counts": {
-        "cached": 0,
-        "candidates": 40,
-        "errors": 6,
-        "fetched": 183,
-        "included": 0,
-        "model_failures": 0,
-        "scored": 0,
-        "unique_fetched": 183
-      },
-      "errors": [
-        "google_patents: patent search service_API_KEY not configured; source skipped",
-        "crossref: HTTP Error 429: Too Many Requests",
-        "crossref: HTTP Error 429: Too Many Requests",
-        "crossref: HTTP Error 429: Too Many Requests",
-        "web_search: patent search service_API_KEY not configured; source skipped",
-        "research service: research service_API_KEY not configured; captured sources remain pending, no synthetic scores published"
-      ],
-      "token_usage": {}
     }
   ],
-  "weeks": [],
+  "weeks": [
+    {
+      "week_start": "2026-10-12",
+      "week_end": "2026-10-18",
+      "synthesis_md": "## This week in brief\n\n- **CPO moves toward production planning.** Celestica announced the DS6005, a 102.4 Tbps co-packaged-optics switch built on Broadcom's Tomahawk 6 Davisson, with 64 × 1.6TbE ports, a 1.5OU liquid-cooled ORv3 chassis, 16 field-replaceable external laser (ELSFP) modules and SONiC support; no power, latency or shipping figures were published ([Celestica DS6005](https://news.google.com/rss/articles/CBMisgFBVV95cUxNdENQcmpRUUd1a0NvRlBEM014V25WaU92T0xlQjlXVUtrNXVva1A0NS1Ua3Y3NFZmTDRHcnhzWUxJaGdKWUN5cXRDaDY0OGJnWkJTWWdvbHNXMmU0dW9MWW5pU0x0WUd2SnlwbmVCMXl0YzFZMFl4SWRQMUo4SWhMbTItMWRtRDMtOTU1Q2VBelc4dUNwWnhHbEJqMWpnRjBYV2RNSkxuNGpfa3NsTVJMa3FR0gG3AUFVX3lxTFB5UHBzY1I5LUFlRzhwekxTLU1vdTRwMjhCU2FDTnFkMWYzM09xV01CNHZJTUhNeFBMWWVkMzY4Z2Q4WTdLNTlRNHJ5YTNYSFNOd2VJb0V6blpGS1FaMkE0ZkRjZkpscjhGVkNxMUtLZGxwN2JDbmlBOS1WTjhGRUQzbzRiR1dsd0laMWtWazVWMkhRRnBDNnNSa2Mtemc3cV9aTWlJTXhnN1VsUGR0NV9CQ2dWOWZLbw?oc=5)).\n- **Live CPO integration demo.** Wiwynn, Ayar Labs and GUC showed an ORv3 compute system with GUC multi-chip packages and Ayar TeraPHY engines fed by SuperNova external light sources, reporting steady eye metrics via telemetry but no quantitative figures ([PR Newswire](https://news.google.com/rss/articles/CBMinwJBVV95cUxPc0txZHM4ZGpfQkRaX1VkMnFpZ3pYcDl6eUZYU0JBWFZJcDk1c3pVam9MWldjLUdaeWZFeW5mZkp6X1FQRWtWclc2dUNNTUE3MXFMTW1XQlZGaEhwZmx1czVydDE1MXFYS0NMVUhIYmlfcm16TDZGZmw1Q3VobHdSUDU4Zy1iOW1mS0lVeURqdTk2V0tTSzljQUJneXlKM3VnV1lCc3NtZGdQOWVvalQ0M1hMU2JXYnhjQTNBMFFFck5reTgyNjd5bVl4bV96RmUtSkJnN1RHZi10di1tWXlQSDM5b1FwbW83cFlzWlNVc24wNndYd09pdklVNU5TVWViVHBuOEJOcTBzUTZDRUU4SFZ6SGpKNkNZdTRGRDZVWQ?oc=5)).\n- **Thermal stress flagged as a CPO packaging barrier.** A DIGITIMES survey snippet reports the 200→400 Gbps/lane transition and warns that CTE mismatch among ASIC, electronic/photonic ICs, lasers and fiber arrays causes thermal stress, warping and positional drift that degrade coupling ([經濟日報](http://money.udn.com/money/story/5612/9824436?from=edn_newest_index)).\n- **Copper busbar joining gets process detail.** A vendor field report describes a 2000W CW fiber laser on a 6-axis cobot welding 2 mm C11000/C10100 copper with 1.5 mm circular wobble at 180 Hz, 12 mm/s and 85% duty, claiming 40% faster busbar production and near-eliminated rework — publisher figures without stated methodology ([PCL](https://pclcutweld.com/engineering-review-2000w-6-axis-collaborative-welder-antwerp-belgium/)).\n- **Simulation-only thermal risk model for bolted joints.** An electro-thermal FEM surrogate (XGBoost, R² = 0.990 ± 0.005, RMSE 1.877 ± 0.542 K over 382 simulated cases) identifies load current and contact resistance as dominant; authors state it is geometry-specific and not experimentally validated ([Frontiers in Mechanical Engineering](https://doi.org/10.3389/fmech.2026.1904437)).\n\n## Themes to watch\n\nCPO commercialization signals cluster around packaging, serviceability and thermal management rather than demonstrated link performance: external lasers, detachable fiber arrays and package-level test are repeatedly framed as qualification requirements ([Knowledge Sourcing](https://www.knowledge-sourcing.com/report/co-packaged-optics-and-optical-engines-for-ai-data-centers-market)). NPO is positioned as an intermediate socketable step with vendor-cited ~8–10 pJ/bit versus ~5–6 pJ/bit for CPO ([Fiber-Mart](https://www.fiber-mart.com/news/nearpackaged-optics-npo-a-comprehensive-guide-a-6860.html)). Separately, busbar reliability work stresses combined thermal/humidity/vibration profiles and flexible transitions, while plating guidance warns that gold thickness alone does not predict mating cycles.\n\n## Evidence gaps\n\nSeveral records are headline-only snippets (Intel 300 mm InP claim, EE Times CPO production piece, Lightmatter–Flex 204.8 Tbps, USFP, 448G SerDes, Semiconductor Engineering thermal co-simulation), so no mechanism or result can be verified. Market forecasts (85% CAGR) are publisher estimates. Vendor announcements and field reports supply no independent measurements, and the busbar surrogate model awaits experimental validation. No patents were supplied, so no novelty or legal-status assessment is possible.",
+      "item_ids": "[\"65fc13025b24db73e6b7a87b\", \"dd87cfaa07277edd3ee2831e\", \"939937d1112b12b4298f98dc\", \"41bbf56663c3d68f8ab2507a\", \"f750be2bb1cb561f7c6b08f9\", \"fb07d1cf3211f49540849343\", \"bea9283a6162914dca5a78f7\", \"a7f4fc2a9119cee2ba6877fa\", \"587b598376df1601f2324df7\", \"b07999b55f22ee4cbd4d9cde\", \"c4f6f56a13f0132a57e120fb\", \"8acd13e36d65e6a50afa2651\", \"fa24f72d90b85ec4ddbbfe1c\", \"ab8bcaf1eb79099e47b8cb29\", \"68a52ac83e881e8d612f68f4\", \"3e692c22ae2af1ac32301856\", \"de32ed8bca93c87675ae6fbf\", \"2c72ca8f66610bf99e623e2c\", \"f2ce32d0ed497efd95d0819b\", \"31f4f55941f22e136c6d682b\", \"1cc8f0aa090c1fafe132a1f8\", \"16bc484befe178b13e0813b6\", \"2b74211ee320c66cad9060d8\", \"400c9b2c2c14e9b98baca5e8\", \"662b4480cadf1eabf05453e6\", \"e1a52ea076ad3336cf24f00f\", \"26706068d2c5b38ac5fd8a41\", \"e0919d27cc5dd92972821192\", \"06dfc4267ea222adcd0b078c\", \"74cbb0631e57188d1163b170\"]",
+      "generated_at": "2026-10-21 21:15:41"
+    }
+  ],
   "topic_weeks": [
+    {
+      "week_start": "2026-10-12",
+      "topic_id": "battery",
+      "week_end": "2026-10-18",
+      "synthesis_md": "## Key developments\n\n- **Combined-environment testing for EV busbars:** A vendor engineering article argues that temperature, humidity, and vibration tests run in isolation miss interacting failure mechanisms, and describes combined profiles (e.g., -40°C to 125°C cycling, up to 95% RH, 3-axis random vibration referenced to ISO 16750-3) with resistance, fastening, insulation, and dimensional checks. No measured results or pass/fail data are reported. [EV Busbar Reliability Testing OEM | Apollo Factory](https://www.stamping-welding.com/info/ev-busbar-environmental-testing-103703886.html)\n\n- **Integrated laser cleaning and welding for copper busbars:** A vendor describes a single-gantry platform combining cleaning and welding to avoid intermediate transfer, with dual workstations, real-time distance measurement, and welding-data traceability. No weld-quality, throughput, or comparative data are given. [Integrated Laser Cleaning and Welding System for Automotive Busbars - Han's Laser](https://www.hanslaserus.com/knowledge/integrated-laser-cleaning-and-welding-system-for-automotive-busbars/)\n\n- **Procurement guidance for energy-storage busbars:** A buyer guide recommends T2/TU1 oxygen-free copper at typically ≥99.9% IACS, lot-level mill certificates, nickel (3–8 µm) or tin plating, defined temperature-rise limits, and compliance documentation (RoHS, REACH, UL 1973, IEC 62619). Recommendations are advisory; no measured data are reported. [2026 Energy Storage PACK Busbar Selection Guide: Conductive Copper Components for Battery Packs-NovaEuris](https://www.novaeuris.com/buyer-guide/2026-energy-storage-pack-busbar-selection-guide-co.html)\n\n- **Paper (adjacent, not busbar-specific):** A Zn single-crystal study reports facet-dependent plating/stripping and loss of epitaxial reversibility on cycling; abstract-only evidence. [Facet-Dependent Plating/Stripping Behavior and Crystallographic Evolution during Cycling on Zn Metal Anodes](https://doi.org/10.1021/acsenergylett.6c01934)\n\n## Evidence gaps\n\nAll busbar records are vendor or buyer-guide content, not peer-reviewed studies, and report no measured performance, adoption, or legal status. No trend can be established from these records alone.",
+      "item_ids": "[\"68a52ac83e881e8d612f68f4\", \"2b74211ee320c66cad9060d8\", \"3e692c22ae2af1ac32301856\", \"587b598376df1601f2324df7\"]",
+      "generated_at": "2026-10-21 21:16:08"
+    },
+    {
+      "week_start": "2026-10-12",
+      "topic_id": "connectivity",
+      "week_end": "2026-10-18",
+      "synthesis_md": "## Key developments\n\nCo-packaged optics (CPO) dominated this week's records, with most items being vendor announcements rather than independent evidence. Celestica announced the DS6005, a liquid-cooled switch built on Broadcom's Tomahawk 6 – Davisson chip, claiming 102.4Tbps capacity and 64 × 1.6TbE ports in 1.5OU for OCP ORv3 racks, with external field-replaceable lasers and SONiC support [Celestica Unveils DS6005](https://news.google.com/rss/articles/CBMilwFBVV95cUxOMzk2OERwakJjRnhHT1ZqM3BVSHd6MmlhT0wwWkNyWUxOYUduaC1yRTJ5RkVfbmRCa0NmdXNNdjh5Z1NmcmVHWUdzZXZfVk12aGlJOUxjZ0p4TDdYTUNPcXQza2lvUUVfY3lhNmJpNEIzd25CSTZqTzZoVVlwcU5NRGdXaEVFdVhoLWxwWUN1V0F4aXRwRldR?oc=5). StorageReview adds that specifications are preliminary with no sampling or shipping dates [StorageReview](https://news.google.com/rss/articles/CBMisgFBVV95cUxNdENQcmpRUUd1a0NvRlBEM014V25WaU92T0xlQjlXVUtrNXVva1A0NS1Ua3Y3NFZmTDRHcnhzWUxJaGdKWUN5cXRDaDY0OGJnWkJTWWdvbHNXMmU0dW9MWW5pU0x0WUd2SnlwbmVCMXl0YzFZMFl4SWRQMUo4SWhMbTItMWRtRDMtOTU1Q2VBelc4dUNwWnhHbEJqMWpnRjBYV2RNSkxuNGpfa3NsTVJMa3FR0gG3AUFVX3lxTFB5UHBzY1I5LUFlRzhwekxTLU1vdTRwMjhCU2FDTnFkMWYzM09xV01CNHZJTUhNeFBMWWVkMzY4Z2Q4WTdLNTlRNHJ5YTNYSFNOd2VJb0V6blpGS1FaMkE0ZkRjZkpscjhGVkNxMUtLZGxwN2JDbmlBOS1WTjhGRUQzbzRiR1dsd0laMWtWazVWMkhRRnBDNnNSa2Mtemc3cV9aTWlJTXhnN1VsUGR0NV9CQ2dWOWZLbw?oc=5). Wiwynn, Ayar Labs and GUC reported a live OCP demonstration of an integrated optical compute system with telemetry from embedded optical engines, but supplied no quantitative figures [PR Newswire](https://news.google.com/rss/articles/CBMinwJBVV95cUxPc0txZHM4ZGpfQkRaX1VkMnFpZ3pYcDl6eUZYU0JBWFZJcDk1c3pVam9MWldjLUdaeWZFeW5mZkp6X1FQRWtWclc2dUNNTUE3MXFMTW1XQlZGaEhwZmx1czVydDE1MXFYS0NMVUhIYmlfcm16TDZGZmw1Q3VobHdSUDU4Zy1iOW1mS0lVeURqdTk2V0tTSzljQUJneXlKM3VnV1lCc3NtZGdQOWVvalQ0M1hMU2JXYnhjQTNBMFFFck5reTgyNjd5bVl4bV96RmUtSkJnN1RHZi10di1tWXlQSDM5b1FwbW83cFlzWlNVc24wNndYd09pdklVNU5TVWViVHBuOEJOcTBzUTZDRUU4SFZ6SGpKNkNZdTRGRDZVWQ?oc=5). A DIGITIMES survey snippet flags thermal-expansion mismatch as a coupling-precision challenge as CPO moves toward 400G per lane [經濟日報](http://money.udn.com/money/story/5612/9824436?from=edn_newest_index).\n\n## Evidence gaps\n\nNo patents or peer-reviewed papers appear in these records; all items are news, vendor announcements, or snippets. Several sources were headline-only (Lightmatter/Flex 204.8Tbps, Intel 300mm InP, EE Times production-planning piece), so no technical claims can be verified from them. No independent measurements, adoption data, or legal status are available; vendor performance claims remain unverified.",
+      "item_ids": "[\"06dfc4267ea222adcd0b078c\", \"ab8bcaf1eb79099e47b8cb29\", \"26706068d2c5b38ac5fd8a41\", \"e0919d27cc5dd92972821192\", \"2c72ca8f66610bf99e623e2c\", \"65fc13025b24db73e6b7a87b\", \"bea9283a6162914dca5a78f7\", \"dd87cfaa07277edd3ee2831e\", \"74cbb0631e57188d1163b170\", \"41bbf56663c3d68f8ab2507a\", \"c4f6f56a13f0132a57e120fb\", \"31f4f55941f22e136c6d682b\", \"662b4480cadf1eabf05453e6\", \"f2ce32d0ed497efd95d0819b\", \"1cc8f0aa090c1fafe132a1f8\"]",
+      "generated_at": "2026-10-21 21:16:01"
+    },
+    {
+      "week_start": "2026-10-12",
+      "topic_id": "joining",
+      "week_end": "2026-10-18",
+      "synthesis_md": "## Key developments\n\nTwo vendor-published items describe laser-based joining of copper busbars, not aluminum or dissimilar-metal joining specifically.\n\n- A Han's Laser knowledge-base article describes an integrated laser cleaning and welding gantry for copper busbars in EV battery packs, ECUs, PDUs, and module connections. It frames the challenge as copper surface contamination plus high thermal conductivity and infrared reflectivity, and proposes a single gantry with cleaning and welding units, dual workstations, real-time laser distance measurement, and automated welding-data recording for traceability. No measured weld quality, throughput, or comparative data are reported [Integrated Laser Cleaning and Welding System for Automotive Busbars - Han's Laser](https://www.hanslaserus.com/knowledge/integrated-laser-cleaning-and-welding-system-for-automotive-busbars/).\n- A PCL cutting and welding field report describes a 2000W CW fiber laser on a 6-axis collaborative arm at a maritime electrical facility in Antwerp for copper busbars and heat-exchange assemblies (C11000/C10100). It cites lead-through programming, beam wobble, power ramp-down, an Argon-Helium 70/30 shielding mix, and floating clamps, with stated parameters for 2mm copper (1.5mm circular wobble at 180Hz, 12mm/s, 85% duty at 2000W). The publisher claims a 40% production-speed increase and near-elimination of rework, without independent verification or stated measurement methodology [Engineering Review: 2000W 6-Axis Collaborative Welder – Antwerp, Belgium – PCL cutting and welding](https://pclcutweld.com/engineering-review-2000w-6-axis-collaborative-welder-antwerp-belgium/).\n\nBoth are news/vendor sources; no patents or peer-reviewed papers are supplied.\n\n## Evidence gaps\n\nNo records address aluminum or dissimilar aluminum-to-other-metal joining, so no trend can be established for the brief's stated scope. Performance claims are vendor self-reported and unverified. Evidence is limited to two commercial descriptions.",
+      "item_ids": "[\"3e692c22ae2af1ac32301856\", \"939937d1112b12b4298f98dc\"]",
+      "generated_at": "2026-10-21 21:16:05"
+    },
     {
       "week_start": "2026-10-12",
       "topic_id": "lubricants",
       "week_end": "2026-10-18",
-      "synthesis_md": "## Key developments\n\n- **Supercritical CO2 + lubricant additives for titanium machining (news, reporting a 2024 paper):** A French team tested additives dissolved in supercritical CO2 for machining Ti6Al4V. At 20 m/min, lubricant mixtures did not beat dry conditions; at 100 m/min, apparent friction coefficient fell by a mean of 0.1, with ionic liquids (BMIM-PF6, BMIM-BF4) giving the largest reductions at 4 mL/min and 400 N. Sticking area fell 54–55% for BF4 and PF6 at 1 mL/min and up to 74% at 4 mL/min; pin temperatures dropped up to 80 °C versus dry, though lubricants added no measurable cooling beyond supercritical CO2 alone. Water, rapeseed oil and sunflower oil performed similarly to mineral oil [Supercritical CO2 and kitchen-shelf lubricants could transform titanium](https://bioengineer.org/supercritical-co2-and-kitchen-shelf-lubricants-could-transform-titanium-machining/).\n\n- **Review of additives for water-based hydraulic fluids (paper):** A Lubricants (MDPI) review surveys liquid additives (fatty alcohol ether-, vegetable oil-, ionic liquid-based) and nanoparticle additives for coal-mine hydraulic supports, and calls for multifunctional, environmentally friendly, low-dose additives [Research Progress and Prospects for Lubricant Additives for Water-Based Hydraulic Fluids in Hydraulic Supports](https://www.mdpi.com/2075-4442/14/10/399).\n\n- **STLE EV gear lubricant report (news):** STLE released a free report on next-generation EV gear lubricants, covering high-speed compact gearboxes, the efficiency-versus-film-strength trade-off, electrical compatibility and stray currents; no measured data are presented [STLE Releases Report on Next-Generation EV Gear Lubricants](https://news.google.com/rss/articles/CBMimwFBVV95cUxPemtwT0VRM3Y4azFNd0xxa1Z0bFZoVTRqSkc5T3BIbURud2cxbUdxZGpFZnlQR0JmdnNJTlRETjhaSl9IbXhYNkViQ0hrZVotN3Bic0h1OWY3aThPX2gwdUpwV2NwVkJtNUphRnptcFZ1bGpjanFSSm1ZWURvd0F2SVlCb3ZGcmJjQVlDcVhscC1Fc29pWGJ4ZmJ4Z9IBoAFBVV95cUxQbndIMmg0c2NhY29QSnhUSVVFV3g5THhiSnBZeEphcTFNNXhTR2xiSDBzcFo0cHZIMFNiZ1pVU3U2WHNmLXdDUTVTQUNEVFJLYUNNM3plclFiT0Rtb0VjTWk2RThwLXlsaERVVDhtdjRja2l5NzJJRF8xNXBHMDF6OFhjeTlrazg2aXByWVJWbUxKQjY4bmdpX1BiM3BNQkYz?oc=5).\n\n## Evidence gaps\n\n- The titanium item is outlet reporting of a 2024 paper, not independent replication; figures/tables may be omitted.\n- The hydraulic-fluid review was retrieved only as abstract/metadata; detailed findings are unavailable.\n- The EV gear report is secondary reporting with no measured performance data.\n- A fourth record (TC4/silicon nitride ionic-liquid study) is only a literature-request page with no abstract or data, so no findings can be cited [Lubrication Mechanism of TC4 Titanium Alloy Against Silicon Nitride by ILs](https://www.ablesci.com/assist/detail?id=D0EZEj).\n- No trend across records can be established; ionic liquids recur but in unrelated applications.",
+      "synthesis_md": "## Key developments\n\n- **Supercritical CO2 + lubricant additives for titanium machining (news, reporting a 2024 paper):** A French team tested additives dissolved in supercritical CO2 for machining Ti6Al4V. At 20 m/min, lubricant mixtures did not beat dry conditions; at 100 m/min, apparent friction coefficient fell by a mean of 0.1, with ionic liquids (BMIM-PF6, BMIM-BF4) giving the largest reductions at 4 mL/min and 400 N. Sticking area fell 54–55% at 1 mL/min and up to 74% at 4 mL/min; pin temperatures dropped up to 80 °C versus dry, though lubricants added no measurable cooling beyond supercritical CO2 alone. Water and vegetable oils performed similarly to mineral oil [Supercritical CO2 and kitchen-shelf lubricants could transform titanium](https://bioengineer.org/supercritical-co2-and-kitchen-shelf-lubricants-could-transform-titanium-machining/).\n\n- **Review of additives for water-based hydraulic fluids (paper):** A Lubricants (MDPI) review surveys liquid additives (fatty alcohol ether, vegetable oil, ionic liquid) and nanoparticle additives for coal-mine hydraulic supports, and calls for multifunctional, environmentally friendly, low-dose formulations [Research Progress and Prospects for Lubricant Additives for Water-Based Hydraulic Fluids in Hydraulic Supports](https://www.mdpi.com/2075-4442/14/10/399).\n\n- **STLE EV gear lubricant report (news):** Secondary reporting describes a free STLE report on EV drivetrain gear lubricants, citing the efficiency-versus-film-strength trade-off and electrical compatibility/stray-current concerns; no measured data are presented [STLE Releases Report on Next-Generation EV Gear Lubricants](https://news.google.com/rss/articles/CBMimwFBVV95cUxPemtwT0VRM3Y4azFNd0xxa1Z0bFZoVTRqSkc5T3BIbURud2cxbUdxZGpFZnlQR0JmdnNJTlRETjhaSl9IbXhYNkViQ0hrZVotN3Bic0h1OWY3aThPX2gwdUpwV2NwVkJtNUphRnptcFZ1bGpjanFSSm1ZWURvd0F2SVlCb3ZGcmJjQVlDcVhscC1Fc29pWGJ4ZmJ4Z9IBoAFBVV95cUxQbndIMmg0c2NhY29QSnhUSVVFV3g5THhiSnBZeEphcTFNNXhTR2xiSDBzcFo0cHZIMFNiZ1pVU3U2WHNmLXdDUTVTQUNEVFJLYUNNM3plclFiT0Rtb0VjTWk2RThwLXlsaERVVDhtdjRja2l5NzJJRF8xNXBHMDF6OFhjeTlrazg2aXByWVJWbUxKQjY4bmdpX1BiM3BNQkYz?oc=5).\n\n- **Ionic-liquid titanium/silicon-nitride study (record only):** A literature-request page lists a 2024 Lubrication Science paper (DOI 10.1002/ls.1704) on IL lubrication of TC4 against silicon nitride; no findings are available [Lubrication Mechanism of TC4 Titanium Alloy Against Silicon Nitride by ILs](https://www.ablesci.com/assist/detail?id=D0EZEj).\n\n## Evidence gaps\n\nEvidence is limited: the titanium item is outlet reporting of a 2024 paper, not independent replication; the hydraulic-fluid review was retrieved only as abstract/metadata; the STLE item is secondary reporting without data; and the TC4/IL record contains no results. No trend or commercial adoption can be established from these records.",
       "item_ids": "[\"fa24f72d90b85ec4ddbbfe1c\", \"a7f4fc2a9119cee2ba6877fa\", \"e1a52ea076ad3336cf24f00f\", \"f750be2bb1cb561f7c6b08f9\"]",
-      "generated_at": "2026-10-21 20:39:37"
+      "generated_at": "2026-10-21 21:16:13"
+    },
+    {
+      "week_start": "2026-10-12",
+      "topic_id": "plating",
+      "week_end": "2026-10-18",
+      "synthesis_md": "## Key developments\n\n**Papers.** A peer-reviewed ACS Energy Letters study used Zn single crystals to show that plating/stripping is strongly facet-dependent: (002), (100) and (101) facets produced hexagonal, prismatic and corner-defined deposits, and stripping left geometry-defined pits that were not refilled on later plating, redirecting growth into mossy/dendritic accumulation [Facet-Dependent Plating/Stripping Behavior](https://doi.org/10.1021/acsenergylett.6c01934). A critical review of additively manufactured EDM electrodes metallized by electroless plus electrolytic copper found printed ABS cores gave comparable material removal rate, wear and surface roughness to solid copper in most comparative studies, but were inferior in several and wore 1.1–2.8 times faster; copper-shell service-life data are lacking [Hybrid tool electrodes](https://doi.org/10.15826/chimtech.10451).\n\n**News.** Fraunhofer IST announced a platform combining electroplating with electrochemical jet machining and deposition plus robotics, intended for localized structuring, repair and coating without bath-size or masking constraints; no measured performance is reported [Precision Instead of Immersion Electroplating](https://news.google.com/rss/articles/CBMi-wFBVV95cUxPS0FLem9JQXEzbnlyNkxFSVZNeWd3Y25McG5YRHhKSGt3cVRIeXVDM3lZbU1HSkFvRkJDaEZmbkQyRU9JdHlUbFU2TVFJSlhScDItelpHQ1dkbFdoT2hvNlY5RGNvQ0RXaUYtamFzRlctblU4cDJFS0lEaG1vdG84NXRlTVU4NmUzQ19ndkNVSDVWUEJMekpfaDhKQUZtb1ZZYzJEUnVPUm0xUWFjTk9mR0RhclNPT0xzUFJBakVwa1hrSjExSm9kRnFtV3RGYVZyNFBLbko4aWw5YV9ZVWNVcGY2UFFTMktBUGdWcFF1YnhzWWhBX1I1Z245bw?oc=5). Vendor explainers covered silver tarnish and migration limits [Silver Plating](https://www.proplate.com/silver-plating-for-conductive-applications-benefits-and-limitations/) and pogo-pin gold thickness specification [Gold plating on a pogo pin](https://www.xtpogopin.com/info/how-thick-should-the-gold-plating-on-a-pogo-pi-103706286.html).\n\n## Evidence gaps\n\nMost items are vendor or conference-preview material without measured data. No trend can be established for trivalent chromium adoption [Trivalent Chromium](https://news.google.com/rss/articles/CBMisgFBVV95cUxOUzBjYzNTX0VDRjlZcURZQnJ5MWoycnVjT0JjUXQwZkg3SFA0QXI2NV9Lb0xxX3QwUkdURk9lX2hPR05EOFk0TUl5SWNQQWF0bVo3UTFNeURpYl9RS2piUGIzTHpMdmJGdndRNFplWGx6RUJFbEtaN0FNaWZzQVVDbjJLNEUyaWFZNE5ZSWE3bVFCUVgwUjk5UlpjOVJFVHBFZS1KUDdZa3JfX0VQVkNiTlFn?oc=5). The 1994 electroless nickel article is historical, not new evidence [Monovalent Cations](https://news.google.com/rss/articles/CBMiuAFBVV95cUxPc3Z0dVJrYUhvY1dZaFBFc1EybGNicXFPTWVseHU5ZmRiN0ZfNEZIQ0IzYUJKZC0zTF9JQl9ibXZNaDhyVTNjakdaS19Pc2E1bjFsXzJkTnlRTTU1XzFYMWV1RjNXbVMweUhaVnNXY28yT1JsMDRyeGFIdGZlLTAxamdVcnlQUjZfcUQ1VXE1TEl1bDRiRnBKTy1WWmp1Q3ZhSVBBS2ViYkpJSGVQcThMYmRWYkVnbDZq?oc=5). The titanium ionic-liquid item is only a literature-request listing with no findings [Lubrication Mechanism](https://www.ablesci.com/assist/detail?id=D0EZEj).",
+      "item_ids": "[\"16bc484befe178b13e0813b6\", \"68a52ac83e881e8d612f68f4\", \"fa24f72d90b85ec4ddbbfe1c\", \"2c72ca8f66610bf99e623e2c\", \"2b74211ee320c66cad9060d8\", \"8acd13e36d65e6a50afa2651\", \"400c9b2c2c14e9b98baca5e8\", \"3e692c22ae2af1ac32301856\", \"b07999b55f22ee4cbd4d9cde\", \"587b598376df1601f2324df7\", \"fb07d1cf3211f49540849343\", \"f750be2bb1cb561f7c6b08f9\"]",
+      "generated_at": "2026-10-21 21:15:55"
+    },
+    {
+      "week_start": "2026-10-12",
+      "topic_id": "thermal",
+      "week_end": "2026-10-18",
+      "synthesis_md": "## Key developments\n\n**Co-packaged optics (CPO) thermal management is the dominant theme this week, but evidence is almost entirely vendor-sourced.** Celestica announced the DS6005, a fully liquid-cooled 102.4Tbps CPO switch built on Broadcom's Tomahawk 6 Davisson, with 64×1.6TbE ports in a 1.5OU ORv3 chassis and 16 field-replaceable external laser modules [Celestica Unveils DS6005](https://news.google.com/rss/articles/CBMilwFBVV95cUxOMzk2OERwakJjRnhHT1ZqM3BVSHd6MmlhT0wwWkNyWUxOYUduaC1yRTJ5RkVfbmRCa0NmdXNNdjh5Z1NmcmVHWUdzZXZfVk12aGlJOUxjZ0p4TDdYTUNPcXQza2lvUUVfY3lhNmJpNEIzd25CSTZqTzZoVVlwcU5NRGdXaEVFdVhoLWxwWUN1V0F4aXRwRldR?oc=5) [StorageReview](https://news.google.com/rss/articles/CBMisgFBVV95cUxNdENQcmpRUUd1a0NvRlBEM014V25WaU92T0xlQjlXVUtrNXVva1A0NS1Ua3Y3NFZmTDRHcnhzWUxJaGdKWUN5cXRDaDY0OGJnWkJTWWdvbHNXMmU0dW9MWW5pU0x0WUd2SnlwbmVCMXl0YzFZMFl4SWRQMUo4SWhMbTItMWRtRDMtOTU1Q2VBelc4dUNwWnhHbEJqMWpnRjBYV2RNSkxuNGpfa3NsTVJMa3FR0gG3AUFVX3lxTFB5UHBzY1I5LUFlRzhwekxTLU1vdTRwMjhCU2FDTnFkMWYzM09xV01CNHZJTUhNeFBMWWVkMzY4Z2Q4WTdLNTlRNHJ5YTNYSFNOd2VJb0V6blpGS1FaMkE0ZkRjZkpscjhGVkNxMUtLZGxwN2JDbmlBOS1WTjhGRUQzbzRiR1dsd0laMWtWazVWMkhRRnBDNnNSa2Mtemc3cV9aTWlJTXhnN1VsUGR0NV9CQ2dWOWZLbw?oc=5). No power or latency figures were published [GlobeNewswire](https://news.google.com/rss/articles/CBMikAJBVV95cUxNYVpKMVIxVFkwUHNMUG0yWjA1U0FEVm1VSFplT0poTmZuNXVNeUFveXFuSjU3TmtPM0JHWm4xYWJxV01MQk9DeHdVSWVReVVOMDhfdk1HS05yTWZLM2lRcEpLSHotWTZRa01EdnZ6NUpEYzhQaV9sVGlwS2dfU0U0U1I2d1FvY0Z4SG14bnZ2SlVFakZLWElRaGhQMm9JOXpOM0dGVTJ0WUQxRzdoNS1oQkNDT1V6YjhyS1ViUVd2LTF0eDczaVlveFpiOVVfX19fTUNFM1BtVFA1dmEzNGhwdFlrb0ZLMzdYSEJKR05WcVV5dmkxMFJYYk1IVS1vUlR5RG1VeDl5d2hiX25FR3l4TQ?oc=5).\n\nA DIGITIMES survey snippet flags CTE mismatch in heterogeneous CPO packages causing thermal stress, warping, and coupling drift [經濟日報](http://money.udn.com/money/story/5612/9824436?from=edn_newest_index). Wiwynn's OCP showcase lists Spectrum-X Ethernet Photonics with CPO among NVIDIA-based platforms [TradingView](https://news.google.com/rss/articles/CBMikAJBVV95cUxOM0FXd1dSckNHeEpfNGp5TGo3MUdTNUctamNUSlUxOTBHSVREU1VnWnBlWUVsLTdqZ3I4aFBFRnFSeXZ0ZDEzQnBZdTN6cEFkbVR6dlo0TWJnUEZfaXV6QnM2a1V4N0JKR3J4Zko4ZFhUMWdrV0hXcmd6d0Z3NTE5eE5iTTVucWNzMU9GQmlFY1lVNnhucWFubnE5dDdnU2NrY2tSWXhuWmt1aHcxTmMzQlM5amxmVDAyYTd2RTYtWjBMaDRHelk5UUR4SUZIR0ZBdmg3c1lpdjBneWhDSUUzZ0JEZ0w4bndUazJxUXZZQ3JfM3ZuQUhPejJFLXA0TjZ1MHktWVFyeUZHYnpiaUxfNQ?oc=5).\n\n**Paper:** an interpretable surrogate for busbar-joint thermal risk reported XGBoost R²=0.990±0.005 against finite-element simulations, but is geometry-specific and not experimentally validated [Frontiers](https://doi.org/10.3389/fmech.2026.1904437).\n\n**Vendor guidance:** Fiber-Mart describes NPO as an intermediate to CPO, citing ~8–10 vs ~5–6 pJ/bit [Fiber-Mart](https://www.fiber-mart.com/news/nearpackaged-optics-npo-a-comprehensive-guide-a-6860.html); Apollo and PCL describe busbar test and welding practices without measured data [Apollo](https://www.stamping-welding.com/info/ev-busbar-environmental-testing-103703886.html) [PCL](https://pclcutweld.com/engineering-review-2000w-6-axis-collaborative-welder-antwerp-belgium/).\n\n## Evidence gaps\n\nNo independent measurements, sampling dates, or adoption data for the DS6005. The Semiconductor Engineering thermal co-simulation item was unretrievable [snippet](https://news.google.com/rss/articles/CBMihwFBVV95cUxPQjlrOXB5TXcyd2l2VXZFVzdCdXBQWGR6ZXBWTzJfNFhjNng3anZtejA2dHN3eHQ4Mm9FNE5rX05FZU5pQ2kwTzlSM0dPeUd0dFhtVlQ5RS1KMVhxOXdUYkdpOHBSR1IxWThRd2ZnMTFoUVlaN212SVVhNjVQZ3dVT3ZqTEo0anM?oc=5). No trend can be established from vendor claims alone.",
+      "item_ids": "[\"06dfc4267ea222adcd0b078c\", \"ab8bcaf1eb79099e47b8cb29\", \"de32ed8bca93c87675ae6fbf\", \"68a52ac83e881e8d612f68f4\", \"e0919d27cc5dd92972821192\", \"65fc13025b24db73e6b7a87b\", \"bea9283a6162914dca5a78f7\", \"939937d1112b12b4298f98dc\", \"74cbb0631e57188d1163b170\", \"f2ce32d0ed497efd95d0819b\"]",
+      "generated_at": "2026-10-21 21:15:49"
     }
   ],
   "stats": {
@@ -20525,5 +20582,5 @@
     "out_of_scope": 370,
     "stale": 25
   },
-  "built_at": "2026-10-21T21:06:58.920763+00:00"
+  "built_at": "2026-10-21T21:17:23.775510+00:00"
 }
