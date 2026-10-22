@@ -158,6 +158,82 @@
         "(\"ionic liquid\" OR \"deep eutectic\" OR solid OR novel) (lubricant OR lubrication OR additive)"
       ],
       "paper_query": "electrical contact high temperature ionic liquid deep eutectic lubricant additives"
+    },
+    {
+      "id": "additive",
+      "name": "Additive Manufacturing",
+      "terms": [
+        "additive manufacturing",
+        "metal 3D printing",
+        "industrial 3D printing",
+        "laser powder bed fusion",
+        "LPBF",
+        "selective laser melting",
+        "binder jetting",
+        "directed energy deposition",
+        "wire arc additive manufacturing",
+        "WAAM",
+        "electron beam melting",
+        "material extrusion",
+        "vat photopolymerization"
+      ],
+      "context_terms": [
+        "manufacturing",
+        "industrial",
+        "metal",
+        "alloy",
+        "polymer",
+        "ceramic",
+        "powder",
+        "process",
+        "part",
+        "component",
+        "qualification",
+        "production",
+        "printing",
+        "deposition",
+        "fusion"
+      ],
+      "patent_queries": [
+        "(\"additive manufacturing\" OR \"laser powder bed fusion\" OR \"directed energy deposition\") (metal OR alloy OR component)",
+        "(\"binder jetting\" OR \"wire arc additive manufacturing\" OR \"metal 3D printing\") (process OR material OR part)"
+      ],
+      "paper_query": "additive manufacturing metal powder bed fusion process defects qualification",
+      "trusted_domains": [
+        "gardnerweb.com",
+        "metal-am.com",
+        "voxelmatters.com",
+        "tctmagazine.com",
+        "3dprintingindustry.com",
+        "americamakes.us",
+        "sme.org",
+        "amgta.org",
+        "vdma.eu",
+        "amamweb.org",
+        "nist.gov",
+        "bam.de",
+        "sciencedirect.com",
+        "journals.sagepub.com",
+        "tandfonline.com",
+        "emerald.com",
+        "link.springer.com",
+        "mdpi.com"
+      ],
+      "trusted_journals": [
+        "Additive Manufacturing",
+        "3D Printing and Additive Manufacturing",
+        "Additive Manufacturing Letters",
+        "Virtual and Physical Prototyping",
+        "Rapid Prototyping Journal",
+        "Progress in Additive Manufacturing",
+        "Materials",
+        "Materials Science and Engineering A",
+        "Materials Science and Engineering A: Structural Materials and Properties",
+        "The International Journal of Advanced Manufacturing Technology",
+        "International Journal of Advanced Manufacturing Technology",
+        "Journal of Materials Processing Technology",
+        "Journal of Manufacturing Processes"
+      ]
     }
   ],
   "sources": [
@@ -345,6 +421,126 @@
       "name": "EPO OPS API",
       "url": "https://www.epo.org/en/searching-for-patents/data/web-services/ops",
       "access": "Recommended: patent records and legal events; credentials and adapter needed"
+    },
+    {
+      "name": "Additive Manufacturing Media",
+      "url": "https://www.additivemanufacturing.media/",
+      "access": "Legacy reference from supplied list; current automated discovery uses Gardner Business Media"
+    },
+    {
+      "name": "Gardner Business Media — Additive Manufacturing",
+      "url": "https://www.gardnerweb.com/brands/additive-manufacturing",
+      "access": "Additive track: curated news/web search coverage"
+    },
+    {
+      "name": "Metal AM",
+      "url": "https://www.metal-am.com/",
+      "access": "Additive track: curated news/web search coverage"
+    },
+    {
+      "name": "VoxelMatters",
+      "url": "https://www.voxelmatters.com/",
+      "access": "Additive track: curated news/web search coverage"
+    },
+    {
+      "name": "TCT Magazine",
+      "url": "https://www.tctmagazine.com/",
+      "access": "Additive track: curated news/web search coverage"
+    },
+    {
+      "name": "3D Printing Industry",
+      "url": "https://3dprintingindustry.com/",
+      "access": "Additive track: curated news/web search coverage"
+    },
+    {
+      "name": "America Makes",
+      "url": "https://www.americamakes.us/",
+      "access": "Additive track: association news/web search coverage"
+    },
+    {
+      "name": "SME Additive Manufacturing Community",
+      "url": "https://www.sme.org/engage/communities/",
+      "access": "Additive track: association news/web search coverage"
+    },
+    {
+      "name": "AMGTA",
+      "url": "https://amgta.org/",
+      "access": "Additive track: association news/web search coverage"
+    },
+    {
+      "name": "VDMA Additive Manufacturing",
+      "url": "https://www.vdma.eu/en/additive-manufacturing",
+      "access": "Additive track: association news/web search coverage"
+    },
+    {
+      "name": "Association for Metal Additive Manufacturing",
+      "url": "https://www.amamweb.org/",
+      "access": "Additive track: association news/web search coverage"
+    },
+    {
+      "name": "Additive Manufacturing (journal)",
+      "url": "https://www.sciencedirect.com/journal/additive-manufacturing",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "3D Printing and Additive Manufacturing (journal)",
+      "url": "https://journals.sagepub.com/home/tdp",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Additive Manufacturing Letters",
+      "url": "https://www.sciencedirect.com/journal/additive-manufacturing-letters",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Virtual and Physical Prototyping",
+      "url": "https://www.tandfonline.com/journals/nvpp20",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Rapid Prototyping Journal",
+      "url": "https://www.emerald.com/insight/publication/issn/1355-2546",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Progress in Additive Manufacturing",
+      "url": "https://link.springer.com/journal/40964",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Materials",
+      "url": "https://www.mdpi.com/journal/materials",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Materials Science and Engineering A",
+      "url": "https://www.sciencedirect.com/journal/materials-science-and-engineering-a",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "International Journal of Advanced Manufacturing Technology",
+      "url": "https://link.springer.com/journal/170",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Journal of Materials Processing Technology",
+      "url": "https://www.sciencedirect.com/journal/journal-of-materials-processing-technology",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "Journal of Manufacturing Processes",
+      "url": "https://www.sciencedirect.com/journal/journal-of-manufacturing-processes",
+      "access": "Additive track: Crossref metadata and indexed web discovery"
+    },
+    {
+      "name": "NIST Additive Manufacturing",
+      "url": "https://www.nist.gov/additive-manufacturing",
+      "access": "Additive track: public research news/web search coverage"
+    },
+    {
+      "name": "BAM Additive Manufacturing",
+      "url": "https://bam.de/en/topics/materials/additive-manufacturing",
+      "access": "Additive track: public research news/web search coverage"
     }
   ],
   "records": [
@@ -20582,5 +20778,5 @@
     "out_of_scope": 370,
     "stale": 25
   },
-  "built_at": "2026-10-21T21:17:23.775510+00:00"
+  "built_at": "2026-10-22T15:16:25.105968+00:00"
 }

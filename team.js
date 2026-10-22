@@ -2,6 +2,7 @@
 const data = JSON.parse(document.getElementById('team-data').textContent);
 const $ = id => document.getElementById(id);
 const names = Object.fromEntries(data.topics.map(t => [t.id,t.name]));
+document.getElementById('track-count').textContent=`${data.topics.length} RESEARCH TRACKS`;
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeURL = value => {try {const u=new URL(value); return ['https:','http:'].includes(u.protocol)?u.href:'#';}catch{return '#';}};
 const readableSource = value => String(value||'').replace(/\\([^\p{L}\p{N}\s])/gu,'$1');
@@ -80,7 +81,7 @@ const latest=data.runs.find(r=>!['score_pending','briefs_only'].includes(r.count
 $('updated').textContent=latest?`Last update · ${latest.started_at} UTC`:'No collection has run yet';
 $('metrics').innerHTML=[['Reviewed signals',reviewed.length,'Selected for the team'],['Patent disclosures',reviewed.filter(r=>r.document_type==='patent').length,'Reviewed publications'],['Awaiting review',pending.length,'Relevant source records'],['Research tracks',data.topics.length,'Materials to architecture']].map(([label,n,note])=>`<div class="metric"><span>${label}</span><b>${n}</b><small>${note}</small></div>`).join('');
 const errors=latest?.errors||[];
-const runLabel=r=>r.counts.mode==='briefs_only'?'Weekly brief refresh · stored research':r.counts.mode==='evidence_retry'?'Source retrieval retry · changed evidence only':r.counts.mode==='evidence_refresh'?'Source evidence refresh · stored collection':r.counts.mode==='patent_sample'?`Historical patent sample · ${r.counts.lookback_days} days · 6 queries`:r.counts.mode==='score_pending'?'Stored-record assessment':'Incremental collection';
+const runLabel=r=>r.counts.mode==='briefs_only'?'Weekly brief refresh · stored research':r.counts.mode==='evidence_retry'?'Source retrieval retry · changed evidence only':r.counts.mode==='evidence_refresh'?'Source evidence refresh · stored collection':r.counts.mode==='patent_sample'?`Historical patent sample · ${r.counts.lookback_days} days · one query per track`:r.counts.mode==='score_pending'?'Stored-record assessment':'Incremental collection';
 $('health').innerHTML=latest?`<div class="health-line">${latest.counts.fetched||0} records fetched in the last run</div><div class="health-line">${latest.counts.scored||0} assessed · ${latest.counts.cached||0} cached</div>${errors.length?`<div class="health-line warning">${errors.length} source / processing notices. Review Sources for details.</div>`:'<div class="health-line">Last run completed without reported errors.</div>'}`:'<div class="health-line warning">Awaiting first collection. Source availability is not yet verified.</div>';
 if(latest?.counts.fetched_by_provider) $('health').insertAdjacentHTML('beforeend',`<div class="health-line">${Object.entries(latest.counts.fetched_by_provider).map(([k,v])=>`${esc(k.replaceAll('_',' '))}: ${Number(v)}`).join(' / ')}</div>`);
 if(latest) $('health').insertAdjacentHTML('afterbegin',`<div class="health-line">${esc(runLabel(latest))}</div>`);
