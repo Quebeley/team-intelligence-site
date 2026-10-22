@@ -79,7 +79,14 @@ function route(){
 }
 const latest=data.runs.find(r=>!['score_pending','briefs_only'].includes(r.counts.mode));
 $('updated').textContent=latest?`Last update · ${latest.started_at} UTC`:'No collection has run yet';
-$('metrics').innerHTML=[['Reviewed signals',reviewed.length,'Selected for the team'],['Patent disclosures',reviewed.filter(r=>r.document_type==='patent').length,'Reviewed publications'],['Awaiting review',pending.length,'Relevant source records'],['Research tracks',data.topics.length,'Materials to architecture']].map(([label,n,note])=>`<div class="metric"><span>${label}</span><b>${n}</b><small>${note}</small></div>`).join('');
+const patentCount=reviewed.filter(r=>r.document_type==='patent').length;
+$('metrics').innerHTML=[
+ ['Selected records',reviewed.length,'Passed automated screening'],
+ ['Selected patents',patentCount,'Included in selected records'],
+ ['Pending assessment',pending.length,'Captured; not selected yet'],
+ ['Research tracks',data.topics.length,'Topics monitored, not records']
+].map(([label,n,note])=>`<div class="metric"><span>${esc(label)}</span><b>${n}</b><small>${esc(note)}</small></div>`).join('')+
+ '<p class="metrics-note">Current library totals across all dates. Duplicate source records are grouped; patents are part of the selected total, while pending records are separate.</p>';
 const errors=latest?.errors||[];
 const runLabel=r=>r.counts.mode==='briefs_only'?'Weekly brief refresh · stored research':r.counts.mode==='evidence_retry'?'Source retrieval retry · changed evidence only':r.counts.mode==='evidence_refresh'?'Source evidence refresh · stored collection':r.counts.mode==='patent_sample'?`Historical patent sample · ${r.counts.lookback_days} days · one query per track`:r.counts.mode==='score_pending'?'Stored-record assessment':'Incremental collection';
 $('health').innerHTML=latest?`<div class="health-line">${latest.counts.fetched||0} records fetched in the last run</div><div class="health-line">${latest.counts.scored||0} assessed · ${latest.counts.cached||0} cached</div>${errors.length?`<div class="health-line warning">${errors.length} source / processing notices. Review Sources for details.</div>`:'<div class="health-line">Last run completed without reported errors.</div>'}`:'<div class="health-line warning">Awaiting first collection. Source availability is not yet verified.</div>';
