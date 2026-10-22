@@ -48,6 +48,9 @@
     detail.append(node('blockquote',citation.quote));
     detail.append(safeLink(source.evidence_url,'Open original source ↗'));
     detail.append(node('p',`${source.document_type} · ${source.content_kind.replaceAll('_',' ')} · ${source.aliases.length} stored source record(s)`,'meta'));
+    const dates=[['Published',source.published_date],['Filed',source.filing_date],
+     ['Priority',source.priority_date],['Collected',source.fetched_date]].filter(([,value])=>value);
+    if(dates.length)detail.append(node('p',dates.map(([label,value])=>`${label}: ${value}`).join(' · ')+' · Stored metadata','meta'));
     if(source.evidence_meta.coverage)detail.append(node('p',source.evidence_meta.coverage,'meta'));
     refs.append(detail);
    }
