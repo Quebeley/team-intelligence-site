@@ -17558,6 +17558,105 @@
       }
     },
     {
+      "id": "7a3dde41cbc78470b0db56a9",
+      "title": "BizLink Partners with ams OSRAM to Advance Photonics for AI Data Center Interconnects",
+      "url": "https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects",
+      "source_name": "www.bizlinktech.com",
+      "source_type": "industry_news",
+      "document_type": "news",
+      "publication_number": null,
+      "assignees": [],
+      "authors": [],
+      "published_date": "2026-09-21",
+      "fetched_date": "2026-10-23",
+      "priority_date": null,
+      "filing_date": null,
+      "content_kind": "full_text",
+      "abstract": "2026—BizLink today announced an ecosystem partnership with innovative light and sensor solutions leader ams OSRAM to co-develop next-generation optical interconnect solutions for AI scale-up domains. ... the optical link demonstrator features a 2D addressable microVCSEL array with an 850 ... fiber-to-fiber connector and optical packaging. ... We specialize in providing essential components such as wire harnesses, connectors, and cables to a broad spectrum of industries.",
+      "summary": "BizLink announced an ecosystem partnership with ams OSRAM to co-develop next-generation optical interconnect solutions for AI scale-up domains, targeting power, latency, density and reliability together. The proposed architecture is a \"wide-and-slow\" approach that distributes data across numerous parallel lower-speed channels rather than pushing data through a few complex, power-hungry high-speed channels, aiming for extended reach and ultra-low latency while preserving cost and power efficiency. At ECOC 2026 (Spain, September 21–23), the companies plan to show a connectorized multi-core fiber solution in a private room, featuring a 2D addressable microVCSEL array at 850 nm paired with BizLink's fiber-to-fiber connector and optical packaging. The announcement is a company press release describing a planned demonstrator; no measured link performance, power, latency or reliability data are provided.",
+      "why_it_matters": "The announcement signals an industry push toward highly parallel, lower-per-channel-rate optical links for AI scale-up fabrics, where connectorization, fiber-array assembly and optical packaging—rather than raw per-lane speed—become the key engineering constraints.",
+      "relevance_score": 82.0,
+      "quality_score": 68.0,
+      "score_details": {
+        "relevance": 82,
+        "quality": 68,
+        "novelty": 72,
+        "engineering_value": 70,
+        "confidence": 74,
+        "reason": "The announcement describes a concrete optical interconnect architecture: a connectorized multi-core fiber link using a 2D addressable microVCSEL array at 850 nm with BizLink fiber-to-fiber connector and optical packaging, targeting low-power, low-latency 'wide-and-slow' AI scale-up interconnects. This is a specific design/architecture change in high-speed optical connectivity, though it is a demonstrator announcement with limited quantitative performance data.",
+        "theme": "Optical interconnect architecture for AI data centers",
+        "topics": [
+          "connectivity"
+        ],
+        "evidence": [],
+        "limitations": "Demonstrator/partnership announcement without measured power, latency, reach, or reliability figures; performance claims are qualitative and vendor-sourced; no independent verification; ECOC demo access limited.",
+        "verified": true,
+        "priority": 75.4,
+        "initial_assessment": {
+          "relevance": 82,
+          "quality": 68,
+          "novelty": 72,
+          "engineering_value": 70,
+          "confidence": 74,
+          "reason": "The announcement describes a concrete optical interconnect architecture: a connectorized multi-core fiber link using a 2D addressable microVCSEL array at 850 nm with BizLink fiber-to-fiber connector and optical packaging, targeting low-power, low-latency 'wide-and-slow' AI scale-up interconnects. This is a specific design/architecture change in high-speed optical connectivity, though it is a demonstrator announcement with limited quantitative performance data.",
+          "theme": "Optical interconnect architecture for AI data centers",
+          "topics": [
+            "connectivity"
+          ],
+          "evidence": [
+            "the optical link demonstrator features a 2D addressable microVCSEL array with an 850 nm wavelength paired with BizLink's specialized fiber-to-fiber connector and optical packaging",
+            "this approach distributes data across numerous parallel, lower-speed channels, achieving extended reach and ultra-low latency while preserving cost and power efficiency",
+            "BizLink and ams OSRAM will present a connectorized multi-core fiber solution",
+            "ams OSRAM is unveiling its latest breakthrough in Thin-Film VCSEL technology and demonstrates a connectorized multi-core fiber solution in collaboration with BizLink"
+          ],
+          "limitations": "Demonstrator/partnership announcement without measured power, latency, reach, or reliability figures; performance claims are qualitative and vendor-sourced; no independent verification; ECOC demo access limited."
+        }
+      },
+      "score_reason": "The announcement describes a concrete optical interconnect architecture: a connectorized multi-core fiber link using a 2D addressable microVCSEL array at 850 nm with BizLink fiber-to-fiber connector and optical packaging, targeting low-power, low-latency 'wide-and-slow' AI scale-up interconnects. This is a specific design/architecture change in high-speed optical connectivity, though it is a demonstrator announcement with limited quantitative performance data.",
+      "status": "included",
+      "claims": [],
+      "body_text": "Blog Category\n5 mins\nBizLink Partners with ams OSRAM to Advance Photonics for AI Data Center Interconnects\nSeptember 21, 2026\nBizLink Partners with ams OSRAM to Advance Photonics for AI Data Center Interconnects\nFREMONT, Calif., September 21, 2026—BizLink today announced an ecosystem partnership with innovative light and sensor solutions leader ams OSRAM to co-develop next-generation optical interconnect solutions for AI scale-up domains. Leveraging its core strengths in fiber array assembly, optical packaging, optical testing, and high-volume manufacturing, BizLink is collaborating with ams OSRAM to demonstrate a revolutionary low-power, low-latency \"wide-and-slow\" optical link technology at the upcoming ECOC 2026 conference and exhibition.\nThe rise of artificial intelligence and the required training infrastructure is redefining the requirements for intra-datacenter connectivity. Bigger AI scale-up domains require interconnects designed for power, latency, density, and reliability together. To address this bottleneck, this innovative optical architecture directly targets these critical requirements. Rather than pushing ever more data through a few complex, power-hungry high-speed channels, this approach distributes data across numerous parallel, lower-speed channels, achieving extended reach and ultra-low latency while preserving cost and power efficiency.\nECOC 2026 Live Demonstration\nAt the upcoming ECOC 2026 conference and exhibition in Spain (September 21–23), BizLink and ams OSRAM will present a connectorized multi-core fiber solution. Shown in a private room, the optical link demonstrator features a 2D addressable microVCSEL array with an 850 nm wavelength paired with BizLink's specialized fiber-to-fiber connector and optical packaging.\n“This demonstrator validates a fundamentally different optical interconnect for low power and low latency wide-and-slow interconnects. By combining ams OSRAM's addressable microVCSEL technology with BizLink's expertise in fiber-array integration, optical packaging, and manufacturing we have pushed the boundaries in optical interconnect technology,” said Hendrik Coldenstrodt, CTO of the Computing and Transportation Business Group at BizLink.\n“We’re very excited to partner with BizLink to co-develop and demonstrate a high-performance optical data link based on our wide-and-slow interconnect architecture and our photonics engine. Together we’re creating a powerful ecosystem with the goal to industrialize this new architecture at scale.” said Ashkan Seyedi, Vice President and General Manager of the Optical Interconnects Business Line at ams OSRAM.\nLong committed to HPC and data centers, BizLink continues to advance its leadership in high-speed and optical interconnects. This collaboration with ams OSRAM highlights BizLink’s expertise in AI optical packaging and optoelectronic manufacturing. Moving forward, BizLink remains dedicated to collaborating with global partners to empower the CPO industry for next-generation AI.\nAbout BizLink\nFounded in 1996 and headquartered in Silicon Valley, USA, BizLink is dedicated to making transformative connections that bring visionary ideas to life. We specialize in providing essential components such as wire harnesses, connectors, and cables to a broad spectrum of industries. Our global presence, with flexible production resources and R&D teams across America, Europe, and Asia, allows us to proactively drive innovation and enable future possibilities. At BizLink, our customer-centric approach and commitment to relentless advancement empower us to deliver zero-distance service and continual performance optimization, making a positive and meaningful impact worldwide. We turn possibilities into reality; furthermore, we connect possibilities to world-changing visions.\nAbout ams OSRAM\nThe ams OSRAM Group (SIX: AMS) is a global leader in innovative light and sensor solutions. As a specialist in Digital Photonics, we combine engineering excellence with cutting-edge global manufacturing to offer our customers the broadest portfolio of digital light and sensing technologies.\n“Sense the power of light” — our success has ever since been based on a deep understanding of the potential of light. For 120 years, we have been developing innovations that move markets: from automotive applications and industrial manufacturing to medical and consumer electronics. In the anniversary year of the OSRAM brand, around 19,000 employees worldwide are working on pioneering solutions alongside societal megatrends such as smart mobility, artificial intelligence, augmented reality, smart health, and robotics. This is reflected in over 12,000 patents granted and applied for. Headquartered in Premstaetten/Graz (Austria) with co-headquarters in Munich (Germany), the group achieved EUR 3.3 billion revenues in 2025 and is listed as ams-OSRAM AG on the SIX Swiss Exchange (ISIN: AT0000A3EPA4).\nFind out more about us on https://ams-osram.com\nams OSRAM at ECOC 2026\nAt ECOC 2026, ams OSRAM is unveiling its latest breakthrough in Thin-Film VCSEL technology and demonstrates a connectorized multi-core fiber solution in collaboration with BizLink, maturing the ecosystem for highly parallel, ultra-low-power optical interconnects for AI Scale-up. While access to the demonstration area is limited, all ECOC visitors are invited to stop by booth 1281 to engage with our experts, exchange ideas and explore how ams OSRAM is helping drive the future of AI connectivity.\nFind out more about ams OSRAM’s AI photonics technology via our dedicated technology page.\nTurning ideas into reality\nConnecting Possibilities To World-Changing Visions.\nExplore the possibilities with our expert solutions.",
+      "evidence_meta": {
+        "status": "article_text",
+        "source_url": "https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects",
+        "publisher_date": "2026-09-21",
+        "sponsored": false,
+        "method": "Web page retrieval",
+        "body_characters": 5711,
+        "coverage": "Accessible page text returned by Web page retrieval; may omit figures, tables, supplements or paywalled sections.",
+        "checked_at": "2026-10-23T18:47:00.959369+00:00",
+        "company": "BizLink",
+        "linked_topics": [
+          "connectivity"
+        ],
+        "source_class": "company_or_approved_partner",
+        "cleaner_version": "source-clean-v1",
+        "cleaning_notes": {
+          "removed_tail_headings": []
+        }
+      },
+      "summary_details": {},
+      "topics": [
+        "industry",
+        "connectivity"
+      ],
+      "original_evidence": {
+        "abstract": "2026—BizLink today announced an ecosystem partnership with innovative light and sensor solutions leader ams OSRAM to co-develop next-generation optical interconnect solutions for AI scale-up domains. ... the optical link demonstrator features a 2D addressable microVCSEL array with an 850 ... fiber-to-fiber connector and optical packaging. ... We specialize in providing essential components such as wire harnesses, connectors, and cables to a broad spectrum of industries.",
+        "body_text": "Blog Category\n\n5 mins\n\n\\# BizLink Partners with ams OSRAM to Advance Photonics for AI Data Center Interconnects\n\nSeptember 21\\, 2026\n\n\\#\\#\\#\\# BizLink Partners with ams OSRAM to Advance Photonics for AI Data Center Interconnects\n\nFREMONT\\, Calif\\.\\, September 21\\, 2026—BizLink today announced an ecosystem partnership with innovative light and sensor solutions leader ams OSRAM to co\\-develop next\\-generation optical interconnect solutions for AI scale\\-up domains\\. Leveraging its core strengths in fiber array assembly\\, optical packaging\\, optical testing\\, and high\\-volume manufacturing\\, BizLink is collaborating with ams OSRAM to demonstrate a revolutionary low\\-power\\, low\\-latency \\\"wide\\-and\\-slow\\\" optical link technology at the upcoming ECOC 2026 conference and exhibition\\.\n\nThe rise of artificial intelligence and the required training infrastructure is redefining the requirements for intra\\-datacenter connectivity\\. Bigger AI scale\\-up domains require interconnects designed for power\\, latency\\, density\\, and reliability together\\. To address this bottleneck\\, this innovative optical architecture directly targets these critical requirements\\. Rather than pushing ever more data through a few complex\\, power\\-hungry high\\-speed channels\\, this approach distributes data across numerous parallel\\, lower\\-speed channels\\, achieving extended reach and ultra\\-low latency while preserving cost and power efficiency\\.\n\nECOC 2026 Live Demonstration\n\nAt the upcoming ECOC 2026 conference and exhibition in Spain \\(September 21–23\\)\\, BizLink and ams OSRAM will present a connectorized multi\\-core fiber solution\\. Shown in a private room\\, the optical link demonstrator features a 2D addressable microVCSEL array with an 850 nm wavelength paired with BizLink\\'s specialized fiber\\-to\\-fiber connector and optical packaging\\.\n\n“This demonstrator validates a fundamentally different optical interconnect for low power and low latency wide\\-and\\-slow interconnects\\. By combining ams OSRAM\\'s addressable microVCSEL technology with BizLink\\'s expertise in fiber\\-array integration\\, optical packaging\\, and manufacturing we have pushed the boundaries in optical interconnect technology\\,” said Hendrik Coldenstrodt\\, CTO of the Computing and Transportation Business Group at BizLink\\.\n\n“We’re very excited to partner with BizLink to co\\-develop and demonstrate a high\\-performance optical data link based on our wide\\-and\\-slow interconnect architecture and our photonics engine\\. Together we’re creating a powerful ecosystem with the goal to industrialize this new architecture at scale\\.” said Ashkan Seyedi\\, Vice President and General Manager of the Optical Interconnects Business Line at ams OSRAM\\.\n\nLong committed to HPC and data centers\\, BizLink continues to advance its leadership in high\\-speed and optical interconnects\\. This collaboration with ams OSRAM highlights BizLink’s expertise in AI optical packaging and optoelectronic manufacturing\\. Moving forward\\, BizLink remains dedicated to collaborating with global partners to empower the CPO industry for next\\-generation AI\\.\nAbout BizLink\n\nFounded in 1996 and headquartered in Silicon Valley\\, USA\\, BizLink is dedicated to making transformative connections that bring visionary ideas to life\\. We specialize in providing essential components such as wire harnesses\\, connectors\\, and cables to a broad spectrum of industries\\. Our global presence\\, with flexible production resources and R\\&D teams across America\\, Europe\\, and Asia\\, allows us to proactively drive innovation and enable future possibilities\\. At BizLink\\, our customer\\-centric approach and commitment to relentless advancement empower us to deliver zero\\-distance service and continual performance optimization\\, making a positive and meaningful impact worldwide\\. We turn possibilities into reality\\; furthermore\\, we connect possibilities to world\\-changing visions\\.\n\nAbout ams OSRAM\n\nThe ams OSRAM Group \\(SIX\\: AMS\\) is a global leader in innovative light and sensor solutions\\. As a specialist in Digital Photonics\\, we combine engineering excellence with cutting\\-edge global manufacturing to offer our customers the broadest portfolio of digital light and sensing technologies\\.\n\n“Sense the power of light” — our success has ever since been based on a deep understanding of the potential of light\\. For 120 years\\, we have been developing innovations that move markets\\: from automotive applications and industrial manufacturing to medical and consumer electronics\\. In the anniversary year of the OSRAM brand\\, around 19\\,000 employees worldwide are working on pioneering solutions alongside societal megatrends such as smart mobility\\, artificial intelligence\\, augmented reality\\, smart health\\, and robotics\\. This is reflected in over 12\\,000 patents granted and applied for\\. Headquartered in Premstaetten\\/Graz \\(Austria\\) with co\\-headquarters in Munich \\(Germany\\)\\, the group achieved EUR 3\\.3 billion revenues in 2025 and is listed as ams\\-OSRAM AG on the SIX Swiss Exchange \\(ISIN\\: AT0000A3EPA4\\)\\.\n\nFind out more about us on https\\:\\/\\/ams\\-osram\\.com\n\nams OSRAM at ECOC 2026\n\nAt ECOC 2026\\, ams OSRAM is unveiling its latest breakthrough in Thin\\-Film VCSEL technology and demonstrates a connectorized multi\\-core fiber solution in collaboration with BizLink\\, maturing the ecosystem for highly parallel\\, ultra\\-low\\-power optical interconnects for AI Scale\\-up\\. While access to the demonstration area is limited\\, all ECOC visitors are invited to stop by booth 1281 to engage with our experts\\, exchange ideas and explore how ams OSRAM is helping drive the future of AI connectivity\\.\n\nFind out more about ams OSRAM’s AI photonics technology via our dedicated technology page\\.\n\nTurning ideas into reality\n\n\\#\\# Connecting Possibilities To World\\-Changing Visions\\.\n\nExplore the possibilities with our expert solutions\\.",
+        "claims": []
+      },
+      "source_aliases": [
+        {
+          "canonical_id": "7a3dde41cbc78470b0db56a9",
+          "id": "7a3dde41cbc78470b0db56a9",
+          "title": "BizLink Partners with ams OSRAM to Advance Photonics for AI Data Center Interconnects",
+          "url": "https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects",
+          "source_name": "www.bizlinktech.com"
+        }
+      ],
+      "previous_assessment": null
+    },
+    {
       "id": "98308058ce292a61ed3368e4",
       "title": "Interfacial engineering of ionic liquid functionalized g-C3N4/GO nanocomposite toward high-performance supercapacitors",
       "url": "https://doi.org/10.1016/j.fuel.2026.141295",
@@ -26158,6 +26257,69 @@
   ],
   "runs": [
     {
+      "id": 22,
+      "started_at": "2026-10-23 18:49:52",
+      "finished_at": "2026-10-23 18:49:52",
+      "counts": {
+        "already_stored": 1,
+        "blocked_date": 22,
+        "blocked_evidence": 4,
+        "blocked_fetch": 7,
+        "blocked_index_page": 2,
+        "blocked_nonarticle_path": 24,
+        "blocked_nontech": 3,
+        "blocked_recruitment": 2,
+        "blocked_sponsored": 1,
+        "blocked_unapproved_publisher": 29,
+        "blocked_unsupported_document": 1,
+        "research service_queries": 19,
+        "included": 1,
+        "mode": "industry_monthly",
+        "model_attempts": 2,
+        "model_rejected": 1,
+        "month_end": "2026-09-30",
+        "month_start": "2026-09-01",
+        "search_rows": 120,
+        "patent search service_queries": 15
+      },
+      "errors": [
+        "Amphenol: patent search service search failed (TimeoutError)",
+        "Yazaki: patent search service search failed (TimeoutError)",
+        "Samtec: patent search service search failed (TimeoutError)",
+        "Samtec: patent search service search failed (TimeoutError)"
+      ],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 614,
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 4139,
+          "prompt_tokens": 4267,
+          "total_tokens": 4881
+        },
+        "research service_verification": {
+          "completion_tokens": 318,
+          "prompt_cache_hit_tokens": 2048,
+          "prompt_cache_miss_tokens": 449,
+          "prompt_tokens": 2497,
+          "total_tokens": 2815
+        },
+        "industry_enrichment": {
+          "completion_tokens": 554,
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1986,
+          "prompt_tokens": 2114,
+          "total_tokens": 2668
+        },
+        "industry_monthly_digest": {
+          "completion_tokens": 445,
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 546,
+          "prompt_tokens": 546,
+          "total_tokens": 991
+        }
+      }
+    },
+    {
       "id": 21,
       "started_at": "2026-10-23 18:28:40",
       "finished_at": "2026-10-23 18:28:40",
@@ -26583,33 +26745,6 @@
           "total_tokens": 179706
         }
       }
-    },
-    {
-      "id": 12,
-      "started_at": "2026-10-21 21:16:13",
-      "finished_at": "2026-10-21 21:16:13",
-      "counts": {
-        "briefs_generated": 7,
-        "errors": 0,
-        "mode": "briefs_only"
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 1466,
-          "prompt_cache_hit_tokens": 384,
-          "prompt_cache_miss_tokens": 13309,
-          "prompt_tokens": 13693,
-          "total_tokens": 15159
-        },
-        "research service_topic_digest": {
-          "completion_tokens": 5805,
-          "prompt_cache_hit_tokens": 9596,
-          "prompt_cache_miss_tokens": 12914,
-          "prompt_tokens": 22510,
-          "total_tokens": 28315
-        }
-      }
     }
   ],
   "weeks": [
@@ -26686,14 +26821,21 @@
       "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector standard for in-vehicle data communication, positioned as a complement to existing coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 meters and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles). It is described as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests (same URL). The connector supports OM3 and OM4 multimode fiber at 850 nm and 980 nm, is protocol-independent (Ethernet and PCIe-based applications cited), and is offered as a straight cable plug, straight cable coupler, and angled PCB connector (same URL). Robustness is attributed in part to an Expanded-Beam Principle that enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear (same URL).\n\nEngineering implication: the announced combination of >50 Gbps over up to 40 m, IEEE 802.3cz compliance, and ISO 24581/ISO 8092/DIN 70214 alignment indicates a connector design intended to let automotive architects adopt optical links where copper reach or bandwidth becomes limiting, while the expanded-beam interface targets field robustness and mating durability. These are announced specifications and test claims, not independently verified results.\n\n## Evidence gaps\n\nOnly one publisher-dated record was supplied, covering a single company; no other monitored interconnect companies have dated technical records in this set, so no activity is reported for them. The record is a company announcement: the >50 Gbps, 40 m, compliance, and dust/water test claims are not corroborated by independent test data or standards-body listings. No production-release, qualification-completion, or volume-deployment evidence is provided, and no interoperability results beyond the stated IEEE 802.3cz compliance are given. The announcement date (2026-10-01) should be confirmed against the publisher's page before citing.",
       "item_ids": "[\"965a5d574adc6673ce28081b\"]",
       "generated_at": "2026-10-23 18:28:40"
+    },
+    {
+      "month_start": "2026-09-01",
+      "month_end": "2026-09-30",
+      "synthesis_md": "## Technical developments\n\nBizLink announced an ecosystem partnership with ams OSRAM to co-develop optical interconnect solutions for AI scale-up domains, proposing a \"wide-and-slow\" architecture that distributes data across many parallel lower-speed channels instead of a few high-speed channels, targeting extended reach, ultra-low latency, and power/cost efficiency (https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects). The companies plan to demonstrate a connectorized multi-core fiber solution at ECOC 2026 (Spain, September 21–23) in a private room, pairing a 2D addressable microVCSEL array at 850 nm with BizLink's fiber-to-fiber connector and optical packaging (same URL). Engineering implication: the parallel-channel approach shifts design pressure from per-lane serial speed toward channel count, connector alignment tolerance, and multi-core fiber packaging, making connectorization and optical packaging the critical integration points for scale-up links (same URL). This is a planned demonstrator described in a company press release; no measured link performance, power, latency, or reliability data are provided (same URL).\n\n## Evidence gaps\n\nThe sole supplied record is a single BizLink announcement; no other monitored interconnect companies have publisher-dated technical records in this set, so no activity is reported for them. For BizLink, the evidence is limited to a partnership announcement and a planned ECOC 2026 demonstration: there are no measured link performance, power, latency, or reliability figures, no test methodology, and no independent verification (https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects). The announcement does not establish that the demonstrator has been built or characterized, and no commercial outcome should be inferred from it (same URL). The 850 nm microVCSEL and multi-core fiber specifications, channel counts, and reach targets are not quantified in the supplied text (same URL).",
+      "item_ids": "[\"7a3dde41cbc78470b0db56a9\"]",
+      "generated_at": "2026-10-23 18:49:52"
     }
   ],
   "stats": {
     "dropped_lowscore": 112,
     "dropped_no_evidence": 11,
-    "included": 142,
+    "included": 143,
     "out_of_scope": 482,
     "stale": 29
   },
-  "built_at": "2026-10-23T18:30:50.575280+00:00"
+  "built_at": "2026-10-23T18:50:12.900494+00:00"
 }
