@@ -26055,6 +26055,48 @@
   ],
   "runs": [
     {
+      "id": 19,
+      "started_at": "2026-10-23 18:14:40",
+      "finished_at": "2026-10-23 18:14:40",
+      "counts": {
+        "blocked_date": 8,
+        "blocked_evidence": 1,
+        "blocked_fetch": 14,
+        "blocked_index_page": 2,
+        "blocked_nonarticle_path": 48,
+        "blocked_nontech": 4,
+        "blocked_nontechnical_title": 1,
+        "blocked_recruitment": 5,
+        "blocked_unapproved_publisher": 27,
+        "blocked_unsupported_document": 5,
+        "research service_queries": 19,
+        "mode": "industry_monthly",
+        "model_attempts": 4,
+        "model_rejected": 4,
+        "month_end": "2026-10-23",
+        "month_start": "2026-10-01",
+        "search_rows": 137,
+        "patent search service_queries": 19
+      },
+      "errors": [],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 1288,
+          "prompt_cache_hit_tokens": 5376,
+          "prompt_cache_miss_tokens": 1240,
+          "prompt_tokens": 6616,
+          "total_tokens": 7904
+        },
+        "research service_verification": {
+          "completion_tokens": 330,
+          "prompt_cache_hit_tokens": 2304,
+          "prompt_cache_miss_tokens": 345,
+          "prompt_tokens": 2649,
+          "total_tokens": 2979
+        }
+      }
+    },
+    {
       "id": 18,
       "started_at": "2026-10-23 18:08:58",
       "finished_at": "2026-10-23 18:08:58",
@@ -26422,61 +26464,6 @@
           "total_tokens": 32555
         }
       }
-    },
-    {
-      "id": 9,
-      "started_at": "2026-10-20 21:54:49",
-      "finished_at": "2026-10-20 21:54:49",
-      "counts": {
-        "cached": 76,
-        "candidates": 114,
-        "errors": 0,
-        "evidence_article_text": 66,
-        "evidence_unavailable": 48,
-        "fetched": 408,
-        "fetched_by_provider": {
-          "crossref": 300,
-          "web_search": 75,
-          "google_news": 33
-        },
-        "included": 43,
-        "lookback_days": 14,
-        "mode": "collection",
-        "model_failures": 0,
-        "scored": 114,
-        "unique_fetched": 405
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 1466,
-          "prompt_cache_hit_tokens": 0,
-          "prompt_cache_miss_tokens": 17907,
-          "prompt_tokens": 17907,
-          "total_tokens": 19373
-        },
-        "research service_enrichment": {
-          "completion_tokens": 23368,
-          "prompt_cache_hit_tokens": 5632,
-          "prompt_cache_miss_tokens": 102405,
-          "prompt_tokens": 108037,
-          "total_tokens": 131405
-        },
-        "research service_scoring": {
-          "completion_tokens": 33466,
-          "prompt_cache_hit_tokens": 29440,
-          "prompt_cache_miss_tokens": 251845,
-          "prompt_tokens": 281285,
-          "total_tokens": 314751
-        },
-        "research service_verification": {
-          "completion_tokens": 4713,
-          "prompt_cache_hit_tokens": 43392,
-          "prompt_cache_miss_tokens": 5514,
-          "prompt_tokens": 48906,
-          "total_tokens": 53619
-        }
-      }
     }
   ],
   "weeks": [
@@ -26552,7 +26539,7 @@
       "month_end": "2026-10-23",
       "synthesis_md": "No verified technical company developments were selected for this month.",
       "item_ids": "[]",
-      "generated_at": "2026-10-23 18:08:58"
+      "generated_at": "2026-10-23 18:14:40"
     }
   ],
   "stats": {
@@ -26562,5 +26549,5 @@
     "out_of_scope": 482,
     "stale": 29
   },
-  "built_at": "2026-10-23T18:10:44.738716+00:00"
+  "built_at": "2026-10-23T18:18:40.217982+00:00"
 }
