@@ -26055,6 +26055,47 @@
   ],
   "runs": [
     {
+      "id": 20,
+      "started_at": "2026-10-23 18:22:35",
+      "finished_at": "2026-10-23 18:22:35",
+      "counts": {
+        "blocked_date": 8,
+        "blocked_fetch": 14,
+        "blocked_index_page": 2,
+        "blocked_nonarticle_path": 50,
+        "blocked_nontech": 4,
+        "blocked_nontechnical_title": 1,
+        "blocked_recruitment": 5,
+        "blocked_unapproved_publisher": 27,
+        "blocked_unsupported_document": 5,
+        "research service_queries": 19,
+        "mode": "industry_monthly",
+        "model_attempts": 3,
+        "model_rejected": 3,
+        "month_end": "2026-10-23",
+        "month_start": "2026-10-01",
+        "search_rows": 137,
+        "patent search service_queries": 19
+      },
+      "errors": [],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 1028,
+          "prompt_cache_hit_tokens": 4608,
+          "prompt_cache_miss_tokens": 886,
+          "prompt_tokens": 5494,
+          "total_tokens": 6522
+        },
+        "research service_verification": {
+          "completion_tokens": 294,
+          "prompt_cache_hit_tokens": 2304,
+          "prompt_cache_miss_tokens": 309,
+          "prompt_tokens": 2613,
+          "total_tokens": 2907
+        }
+      }
+    },
+    {
       "id": 19,
       "started_at": "2026-10-23 18:14:40",
       "finished_at": "2026-10-23 18:14:40",
@@ -26437,33 +26478,6 @@
           "total_tokens": 29117
         }
       }
-    },
-    {
-      "id": 10,
-      "started_at": "2026-10-21 20:39:37",
-      "finished_at": "2026-10-21 20:39:37",
-      "counts": {
-        "briefs_generated": 7,
-        "errors": 0,
-        "mode": "briefs_only"
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 1167,
-          "prompt_cache_hit_tokens": 0,
-          "prompt_cache_miss_tokens": 16176,
-          "prompt_tokens": 16176,
-          "total_tokens": 17343
-        },
-        "research service_topic_digest": {
-          "completion_tokens": 4943,
-          "prompt_cache_hit_tokens": 0,
-          "prompt_cache_miss_tokens": 27612,
-          "prompt_tokens": 27612,
-          "total_tokens": 32555
-        }
-      }
     }
   ],
   "weeks": [
@@ -26539,7 +26553,7 @@
       "month_end": "2026-10-23",
       "synthesis_md": "No verified technical company developments were selected for this month.",
       "item_ids": "[]",
-      "generated_at": "2026-10-23 18:14:40"
+      "generated_at": "2026-10-23 18:22:35"
     }
   ],
   "stats": {
@@ -26549,5 +26563,5 @@
     "out_of_scope": 482,
     "stale": 29
   },
-  "built_at": "2026-10-23T18:18:40.217982+00:00"
+  "built_at": "2026-10-23T18:24:28.379203+00:00"
 }
