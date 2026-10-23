@@ -26055,6 +26055,52 @@
   ],
   "runs": [
     {
+      "id": 18,
+      "started_at": "2026-10-23 18:08:58",
+      "finished_at": "2026-10-23 18:08:58",
+      "counts": {
+        "blocked_date": 9,
+        "blocked_evidence": 1,
+        "blocked_fetch": 10,
+        "blocked_index_page": 2,
+        "blocked_nonarticle_path": 38,
+        "blocked_nontech": 5,
+        "blocked_nontechnical_title": 1,
+        "blocked_recruitment": 5,
+        "blocked_unapproved_publisher": 27,
+        "blocked_unsupported_document": 5,
+        "research service_queries": 19,
+        "mode": "industry_monthly",
+        "model_attempts": 6,
+        "model_failures": 1,
+        "model_rejected": 5,
+        "month_end": "2026-10-23",
+        "month_start": "2026-10-01",
+        "search_rows": 127,
+        "patent search service_queries": 18
+      },
+      "errors": [
+        "BizLink: assessment failed (KeyError)",
+        "Hirose Electric: patent search service search failed (TimeoutError)"
+      ],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 1699,
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 9629,
+          "prompt_tokens": 9629,
+          "total_tokens": 11328
+        },
+        "research service_verification": {
+          "completion_tokens": 313,
+          "prompt_cache_hit_tokens": 2304,
+          "prompt_cache_miss_tokens": 328,
+          "prompt_tokens": 2632,
+          "total_tokens": 2945
+        }
+      }
+    },
+    {
       "id": 17,
       "started_at": "2026-10-23 15:38:42",
       "finished_at": "2026-10-23 15:38:42",
@@ -26431,55 +26477,6 @@
           "total_tokens": 53619
         }
       }
-    },
-    {
-      "id": 8,
-      "started_at": "2026-10-20 21:21:09",
-      "finished_at": "2026-10-20 21:21:09",
-      "counts": {
-        "cached": 70,
-        "candidates": 7,
-        "errors": 0,
-        "evidence_abstract_and_claims": 7,
-        "fetched": 0,
-        "included": 6,
-        "lookback_days": 14,
-        "mode": "evidence_refresh",
-        "model_failures": 0,
-        "scored": 7,
-        "unique_fetched": 0
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 1585,
-          "prompt_cache_hit_tokens": 5756,
-          "prompt_cache_miss_tokens": 134,
-          "prompt_tokens": 5890,
-          "total_tokens": 7475
-        },
-        "research service_enrichment": {
-          "completion_tokens": 3834,
-          "prompt_cache_hit_tokens": 1152,
-          "prompt_cache_miss_tokens": 12847,
-          "prompt_tokens": 13999,
-          "total_tokens": 17833
-        },
-        "research service_scoring": {
-          "completion_tokens": 2612,
-          "prompt_cache_hit_tokens": 3328,
-          "prompt_cache_miss_tokens": 14805,
-          "prompt_tokens": 18133,
-          "total_tokens": 20745
-        },
-        "research service_verification": {
-          "completion_tokens": 385,
-          "prompt_cache_hit_tokens": 1408,
-          "prompt_cache_miss_tokens": 518,
-          "prompt_tokens": 1926,
-          "total_tokens": 2311
-        }
-      }
     }
   ],
   "weeks": [
@@ -26549,7 +26546,15 @@
       "generated_at": "2026-10-23 15:38:15"
     }
   ],
-  "industry_months": [],
+  "industry_months": [
+    {
+      "month_start": "2026-10-01",
+      "month_end": "2026-10-23",
+      "synthesis_md": "No verified technical company developments were selected for this month.",
+      "item_ids": "[]",
+      "generated_at": "2026-10-23 18:08:58"
+    }
+  ],
   "stats": {
     "dropped_lowscore": 112,
     "dropped_no_evidence": 11,
@@ -26557,5 +26562,5 @@
     "out_of_scope": 482,
     "stale": 29
   },
-  "built_at": "2026-10-23T18:00:29.943358+00:00"
+  "built_at": "2026-10-23T18:10:44.738716+00:00"
 }
