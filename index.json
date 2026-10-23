@@ -26257,6 +26257,40 @@
   ],
   "runs": [
     {
+      "id": 23,
+      "started_at": "2026-10-23 18:55:09",
+      "finished_at": "2026-10-23 18:55:09",
+      "counts": {
+        "already_stored": 2,
+        "blocked_date": 19,
+        "blocked_evidence": 4,
+        "blocked_fetch": 15,
+        "blocked_index_page": 2,
+        "blocked_nonarticle_path": 32,
+        "blocked_nontech": 3,
+        "blocked_recruitment": 2,
+        "blocked_unapproved_publisher": 29,
+        "blocked_unsupported_document": 3,
+        "research service_queries": 19,
+        "duplicate_events": 1,
+        "mode": "industry_monthly",
+        "month_end": "2026-09-30",
+        "month_start": "2026-09-01",
+        "search_rows": 140,
+        "patent search service_queries": 19
+      },
+      "errors": [],
+      "token_usage": {
+        "industry_monthly_digest": {
+          "completion_tokens": 341,
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 162,
+          "prompt_tokens": 546,
+          "total_tokens": 887
+        }
+      }
+    },
+    {
       "id": 22,
       "started_at": "2026-10-23 18:49:52",
       "finished_at": "2026-10-23 18:49:52",
@@ -26699,52 +26733,6 @@
           "total_tokens": 30221
         }
       }
-    },
-    {
-      "id": 13,
-      "started_at": "2026-10-22 15:43:40",
-      "finished_at": "2026-10-22 15:43:40",
-      "counts": {
-        "cached": 0,
-        "candidates": 43,
-        "errors": 0,
-        "evidence_article_excerpt": 1,
-        "evidence_article_text": 25,
-        "evidence_unavailable": 17,
-        "fetched": 0,
-        "fetched_by_provider": {},
-        "included": 32,
-        "lookback_days": 14,
-        "mode": "score_pending",
-        "model_failures": 0,
-        "purged_unsuitable_sources": 0,
-        "scored": 43,
-        "unique_fetched": 0
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_enrichment": {
-          "completion_tokens": 17187,
-          "prompt_cache_hit_tokens": 4096,
-          "prompt_cache_miss_tokens": 196136,
-          "prompt_tokens": 200232,
-          "total_tokens": 217419
-        },
-        "research service_scoring": {
-          "completion_tokens": 12988,
-          "prompt_cache_hit_tokens": 10752,
-          "prompt_cache_miss_tokens": 211717,
-          "prompt_tokens": 222469,
-          "total_tokens": 235457
-        },
-        "research service_verification": {
-          "completion_tokens": 7002,
-          "prompt_cache_hit_tokens": 164736,
-          "prompt_cache_miss_tokens": 7968,
-          "prompt_tokens": 172704,
-          "total_tokens": 179706
-        }
-      }
     }
   ],
   "weeks": [
@@ -26825,9 +26813,9 @@
     {
       "month_start": "2026-09-01",
       "month_end": "2026-09-30",
-      "synthesis_md": "## Technical developments\n\nBizLink announced an ecosystem partnership with ams OSRAM to co-develop optical interconnect solutions for AI scale-up domains, proposing a \"wide-and-slow\" architecture that distributes data across many parallel lower-speed channels instead of a few high-speed channels, targeting extended reach, ultra-low latency, and power/cost efficiency (https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects). The companies plan to demonstrate a connectorized multi-core fiber solution at ECOC 2026 (Spain, September 21–23) in a private room, pairing a 2D addressable microVCSEL array at 850 nm with BizLink's fiber-to-fiber connector and optical packaging (same URL). Engineering implication: the parallel-channel approach shifts design pressure from per-lane serial speed toward channel count, connector alignment tolerance, and multi-core fiber packaging, making connectorization and optical packaging the critical integration points for scale-up links (same URL). This is a planned demonstrator described in a company press release; no measured link performance, power, latency, or reliability data are provided (same URL).\n\n## Evidence gaps\n\nThe sole supplied record is a single BizLink announcement; no other monitored interconnect companies have publisher-dated technical records in this set, so no activity is reported for them. For BizLink, the evidence is limited to a partnership announcement and a planned ECOC 2026 demonstration: there are no measured link performance, power, latency, or reliability figures, no test methodology, and no independent verification (https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects). The announcement does not establish that the demonstrator has been built or characterized, and no commercial outcome should be inferred from it (same URL). The 850 nm microVCSEL and multi-core fiber specifications, channel counts, and reach targets are not quantified in the supplied text (same URL).",
+      "synthesis_md": "## Technical developments\n\n- BizLink announced an ecosystem partnership with ams OSRAM to co-develop optical interconnect solutions for AI scale-up domains, proposing a \"wide-and-slow\" architecture that distributes data across many parallel lower-speed channels instead of a few high-speed channels, targeting extended reach and ultra-low latency while preserving cost and power efficiency. The companies plan to demonstrate a connectorized multi-core fiber solution at ECOC 2026 (Spain, September 21–23), pairing a 2D addressable microVCSEL array at 850 nm with BizLink's fiber-to-fiber connector and optical packaging. Engineering implication: the parallel-channel approach shifts design emphasis toward connector alignment, multi-core fiber coupling, and array-level optical packaging rather than per-lane speed; the planned demonstrator is the relevant technical milestone to watch. Source: https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects\n\n## Evidence gaps\n\n- The BizLink/ams OSRAM item is a company press release describing a planned demonstrator; no measured link performance, power, latency, or reliability data are provided, so the architecture's claimed benefits remain unverified. Source: https://www.bizlinktech.com/zh-cn/news/bizlink-partners-with-ams-osram-to-advance-photonics-for-ai-data-center-interconnects\n- No other monitored interconnect companies have publisher-dated technical records in this set, so no further engineering activity can be reported without inventing it.",
       "item_ids": "[\"7a3dde41cbc78470b0db56a9\"]",
-      "generated_at": "2026-10-23 18:49:52"
+      "generated_at": "2026-10-23 18:55:09"
     }
   ],
   "stats": {
@@ -26837,5 +26825,5 @@
     "out_of_scope": 482,
     "stale": 29
   },
-  "built_at": "2026-10-23T18:50:12.900494+00:00"
+  "built_at": "2026-10-23T18:55:31.409667+00:00"
 }
