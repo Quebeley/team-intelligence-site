@@ -8,6 +8,7 @@ const safeURL = value => {try {const u=new URL(value); return ['https:','http:']
 const readableSource = value => String(value||'').replace(/\\([^\p{L}\p{N}\s])/gu,'$1');
 const anchor = (url,title) => `<a href="${esc(safeURL(url))}" target="_blank" rel="noopener noreferrer">${esc(title)}</a>`;
 const priority = r => Number(r.score_details?.priority ?? r.relevance_score ?? -1);
+const list = value => Array.isArray(value)?value:typeof value==='string'&&value.trim()?[value]:[];
 const recordDate = r => r.published_date||r.fetched_date||'';
 const freshness = r => {const age=(Date.parse(data.built_at)-Date.parse(recordDate(r)))/86400000;return Number.isFinite(age)?Math.max(0,1-Math.max(0,age)/90):0;};
 const balancedScore = r => .8*priority(r)+20*freshness(r);
@@ -22,7 +23,7 @@ function card(r){
  const sourceText=r.summary||r.abstract||'No source abstract available.';
  const preview=sourceText.length>420?sourceText.slice(0,420)+'…':sourceText;
  const score=r.status==='candidate'?'<span class="pending">PENDING REVIEW</span>':`<span class="score" title="Engineering priority">${Math.round(priority(r))}<small> / 100</small></span>`;
- const evidence=(details.evidence||[]).map(q=>`<p>“${esc(q)}”</p>`).join('');
+ const evidence=list(details.evidence).map(q=>`<p>“${esc(q)}”</p>`).join('');
  const meta=r.evidence_meta||{};
  const coverage=meta.status==='abstract_and_claims'?`Abstract + ${r.claims.length} claims`:meta.status==='article_excerpt'?`Accessible excerpt - ${Number(meta.body_characters).toLocaleString()} characters`:meta.status==='article_text'?`Article text · ${Number(meta.body_characters).toLocaleString()} characters`:meta.status==='unavailable'?'Limited evidence · source unavailable':meta.status==='partial'?'Partial source evidence':r.content_kind.replaceAll('_',' ');
  return `<article class="card"><div class="card-top"><span class="type-label">${esc(r.document_type)} · ${esc(coverage)}</span>${score}</div>
@@ -30,7 +31,7 @@ function card(r){
  ${meta.discovery?.date_basis&&r.published_date?'Index date (unverified): ':''}${esc(r.published_date||'Publication date unknown')} ${r.publication_number?' · '+esc(r.publication_number):''}${historicalPatent(r)?' · HISTORICAL PATENT':''}</div>
  ${r.assignees.length?`<p class="meta">ASSIGNEE · ${esc(r.assignees.join('; '))}</p>`:''}
  <p>${esc(preview)}</p>
- ${(r.summary_details?.technical_points||[]).length?`<ul class="technical-points">${r.summary_details.technical_points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
+ ${list(r.summary_details?.technical_points).length?`<ul class="technical-points">${list(r.summary_details?.technical_points).map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
  ${r.why_it_matters?`<div class="why"><b>ENGINEERING IMPLICATION</b>${esc(r.why_it_matters)}</div>`:''}
  <div class="tags">${r.topics.map(t=>`<span class="tag">${esc(names[t]||t)}</span>`).join('')}</div>
  <details><summary>Evidence & assessment</summary><p>${esc(r.score_reason||'Captured from source; awaiting model assessment.')}</p>
@@ -38,8 +39,8 @@ function card(r){
  <div class="score-grid">${['priority','novelty','engineering_value','quality','confidence'].filter(k=>details[k]!=null).map(k=>`<span>${esc(k.replaceAll('_',' '))}: ${esc(details[k])}</span>`).join('')}</div>
  ${r.previous_assessment?`<p class="meta">Previous assessment → current: ${['relevance','quality','confidence'].map(k=>`${esc(k)} ${esc(r.previous_assessment[k])} → ${esc(details[k])}`).join(' · ')}</p>`:''}
  ${r.status==='dropped_lowscore'?'<p>Below the selection threshold (relevance 65). Retained for review and comparison.</p>':''}
- ${evidence}${(details.limitations||[]).map(l=>`<p>Limit: ${esc(l)}</p>`).join('')}
- ${(r.summary_details?.limitations||[]).map(l=>`<p>Source limitation: ${esc(l)}</p>`).join('')}
+ ${evidence}${list(details.limitations).map(l=>`<p>Limit: ${esc(l)}</p>`).join('')}
+ ${list(r.summary_details?.limitations).map(l=>`<p>Source limitation: ${esc(l)}</p>`).join('')}
  ${r.abstract?`<p><b>${meta.abstract_retrieved?'Publication abstract':'Original abstract / excerpt'}</b><br>${esc(r.abstract)}</p>`:''}
  ${r.claims?.length?`<details class="source-detail"><summary>Read ${r.claims.length} patent claims</summary><div class="source-scroll">${r.claims.map(c=>`<p>${esc(c)}</p>`).join('')}</div></details>`:''}
  ${r.body_text?`<details class="source-detail"><summary>Read cleaned article text (${r.body_text.length.toLocaleString()} characters)</summary><div class="source-scroll article-text">${esc(readableSource(r.body_text))}</div></details>`:''}
