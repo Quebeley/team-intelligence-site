@@ -50,9 +50,21 @@ function card(r){
  <p>Captured ${esc(r.fetched_date)}${r.filing_date?' · Filed '+esc(r.filing_date):''}${r.priority_date?' · Priority '+esc(r.priority_date):''}. ${details.verified?'High-score assessment checked in a second model pass.':''}</p></details></article>`;
 }
 function empty(title,body,link=''){return `<div class="empty"><h3>${esc(title)}</h3><p>${esc(body)}</p>${link}</div>`;}
+function openTrackLibrary(id){
+ track=id;showOverview();
+ $('search').value='';$('topic').value=id;$('type').value=id==='industry'?'news':'';
+ $('status').value='included';$('from').value='';$('sort').value='newest';
+ location.hash='#archive';renderLibrary();route();
+}
 function showOverview(){
  $('overview-topics').innerHTML=[['','All tracks'],...Object.entries(names)].map(([id,name])=>`<button data-track="${esc(id)}" class="${track===id?'selected':''}" aria-pressed="${track===id}">${esc(name)}</button>`).join('');
  $('overview-topics').querySelectorAll('button').forEach(b=>b.onclick=()=>{track=b.dataset.track;showOverview();});
+ const context=$('overview-context');context.hidden=track!=='industry';
+ if(track==='industry'){
+  context.innerHTML='Company technical announcements · Updated monthly. <a href="#archive" id="industry-library-link">Browse company updates ↗</a> · <a href="#briefs" id="industry-brief-link">Read monthly brief ↗</a>';
+  $('industry-library-link').onclick=()=>openTrackLibrary('industry');
+  $('industry-brief-link').onclick=()=>{briefTrack='industry';renderBriefs();};
+ }
  const rows=ranked(reviewed.filter(r=>!track||r.topics.includes(track))).slice(0,10);
  $('featured').innerHTML=rows.length?rows.map(card).join(''):empty('Your next signal is on its way.',pending.length?`${pending.length} relevant records have been captured and are awaiting review. Approved results will appear here after scoring.`:'The first collection is ready to run. Once sources are connected, reviewed developments will appear here.','<a href="#archive" id="pending-link">Browse pending records ↗</a>');
  const link=$('pending-link'); if(link)link.onclick=()=>{$('status').value='candidate';renderLibrary();};
@@ -95,8 +107,9 @@ if(latest) $('health').insertAdjacentHTML('afterbegin',`<div class="health-line"
  const coverageTotals=data.records.reduce((acc,r)=>{const key=r.evidence_meta?.status;if(key)acc[key]=(acc[key]||0)+1;return acc;},{});
  if(coverageTotals.abstract_and_claims || coverageTotals.article_text) $('health').insertAdjacentHTML('beforeend',`<div class="health-line">Collection coverage: ${coverageTotals.abstract_and_claims||0} abstracts + claims · ${coverageTotals.article_text||0} article bodies · ${coverageTotals.article_excerpt||0} accessible excerpts</div>`);
  if(coverageTotals.unavailable || coverageTotals.partial) $('health').insertAdjacentHTML('beforeend',`<div class="health-line warning">${coverageTotals.unavailable||0} sources unavailable for deeper retrieval · ${coverageTotals.partial||0} partial patent records. Existing evidence retained.</div>`);
-$('track-summary').innerHTML=data.topics.map(t=>`<div class="track-line"><span>${esc(t.name)}</span><b>${reviewed.filter(r=>r.topics.includes(t.id)).length}</b></div>`).join('');
+$('track-summary').innerHTML=data.topics.map(t=>`<button type="button" class="track-line" data-track="${esc(t.id)}" aria-label="Browse ${esc(t.name)} records"><span>${esc(t.name)}</span><b>${reviewed.filter(r=>r.topics.includes(t.id)).length} ↗</b></button>`).join('');
 $('topic').innerHTML+='<option disabled>────────</option>'+data.topics.map(t=>`<option value="${esc(t.id)}">${esc(t.name)}</option>`).join('');
+document.querySelectorAll('#track-summary button').forEach(b=>b.onclick=()=>openTrackLibrary(b.dataset.track));
 $('source-list').innerHTML=data.sources.map(s=>`<article class="source-card"><h3>${anchor(s.url,s.name+' ↗')}</h3><p>${esc(s.access)}</p></article>`).join('');
 $('run-list').innerHTML=data.runs.length?data.runs.map(r=>`<div class="run"><b>${esc(r.started_at)} UTC</b><p>${r.counts.mode==='industry_monthly'?`Search results ${r.counts.search_rows||0} · Assessed ${r.counts.model_attempts||0} · Included ${r.counts.included||0}`:r.counts.mode==='briefs_only'?`${r.counts.briefs_generated||0} weekly briefs generated from stored research`:`Fetched ${r.counts.fetched||0} · Scored ${r.counts.scored||0} · Included ${r.counts.included||0} · Cached ${r.counts.cached||0}`}</p>${r.errors.length?'<ul>'+r.errors.map(e=>`<li>${esc(e)}</li>`).join('')+'</ul>':'No reported errors.'}</div>`).join(''):empty('No collection history yet.','Run the collector to record source availability and processing results.');
 document.querySelectorAll('#run-list .run').forEach((el,i)=>el.insertAdjacentHTML('afterbegin',`<p>${esc(runLabel(data.runs[i]))}</p>`));
