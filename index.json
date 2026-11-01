@@ -35011,6 +35011,48 @@
   ],
   "runs": [
     {
+      "id": 36,
+      "started_at": "2026-11-01 16:48:37",
+      "finished_at": "2026-11-01 16:48:37",
+      "counts": {
+        "already_stored": 1,
+        "blocked_date": 2,
+        "blocked_fetch": 4,
+        "blocked_index_page": 1,
+        "blocked_nonarticle_path": 12,
+        "blocked_nontech": 3,
+        "blocked_sponsored": 2,
+        "blocked_unapproved_publisher": 141,
+        "research service_queries": 19,
+        "mode": "industry_monthly",
+        "model_attempts": 2,
+        "model_rejected": 2,
+        "month_end": "2026-10-31",
+        "month_start": "2026-10-01",
+        "search_rows": 168,
+        "patent search service_queries": 18
+      },
+      "errors": [
+        "Rosenberger: patent search service search failed (TimeoutError)"
+      ],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 624,
+          "prompt_cache_hit_tokens": 2432,
+          "prompt_cache_miss_tokens": 590,
+          "prompt_tokens": 3022,
+          "total_tokens": 3646
+        },
+        "industry_monthly_digest": {
+          "completion_tokens": 545,
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 136,
+          "prompt_tokens": 520,
+          "total_tokens": 1065
+        }
+      }
+    },
+    {
       "id": 35,
       "started_at": "2026-11-01 16:43:52",
       "finished_at": "2026-11-01 16:43:52",
@@ -35396,71 +35438,6 @@
           "total_tokens": 59898
         }
       }
-    },
-    {
-      "id": 26,
-      "started_at": "2026-10-26 12:33:25",
-      "finished_at": "2026-10-26 12:33:25",
-      "counts": {
-        "briefs_generated": 8,
-        "cached": 148,
-        "candidates": 150,
-        "demoted_unverified_news": 0,
-        "errors": 0,
-        "evidence_article_text": 82,
-        "evidence_unavailable": 59,
-        "fetched": 547,
-        "fetched_by_provider": {
-          "crossref": 400,
-          "web_search": 100,
-          "google_news": 47
-        },
-        "included": 63,
-        "lookback_days": 14,
-        "mode": "collection",
-        "model_failures": 0,
-        "purged_unsuitable_sources": 9,
-        "scored": 141,
-        "unique_fetched": 536
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 1032,
-          "prompt_cache_hit_tokens": 0,
-          "prompt_cache_miss_tokens": 17295,
-          "prompt_tokens": 17295,
-          "total_tokens": 18327
-        },
-        "research service_enrichment": {
-          "completion_tokens": 35744,
-          "prompt_cache_hit_tokens": 79232,
-          "prompt_cache_miss_tokens": 234433,
-          "prompt_tokens": 313665,
-          "total_tokens": 349409
-        },
-        "research service_scoring": {
-          "completion_tokens": 44921,
-          "prompt_cache_hit_tokens": 139392,
-          "prompt_cache_miss_tokens": 427009,
-          "prompt_tokens": 566401,
-          "total_tokens": 611322
-        },
-        "research service_topic_digest": {
-          "completion_tokens": 4793,
-          "prompt_cache_hit_tokens": 0,
-          "prompt_cache_miss_tokens": 27011,
-          "prompt_tokens": 27011,
-          "total_tokens": 31804
-        },
-        "research service_verification": {
-          "completion_tokens": 7392,
-          "prompt_cache_hit_tokens": 171520,
-          "prompt_cache_miss_tokens": 8294,
-          "prompt_tokens": 179814,
-          "total_tokens": 187206
-        }
-      }
     }
   ],
   "weeks": [
@@ -35597,9 +35574,9 @@
     {
       "month_start": "2026-10-01",
       "month_end": "2026-10-31",
-      "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector standard for in-vehicle data communication, positioned as a complement to existing coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 meters and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: a protocol-independent optical link at these rates and reach gives automotive network architects a fiber option for high-bandwidth segments where copper reach or EMI behavior may constrain design; the cited Ethernet and PCIe-based applications indicate intended use across multiple in-vehicle protocols rather than a single stack.\n\nThe connector is described as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles). It supports OM3 and OM4 multimode fibers at 850 nm and 980 nm and is offered as a straight cable plug, straight cable coupler, and angled PCB connector. Robustness is attributed in part to an Expanded-Beam Principle that enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear.\n\nEngineering implication: the expanded-beam design and cited dust/water testing target the field-failure modes that have historically limited optical connectors in vehicles—contamination and end-face wear at mating interfaces—while the angled PCB variant addresses board-level routing constraints.\n\n## Evidence gaps\n\nThe supplied record is a single company announcement; it does not provide independent test data, qualification reports, or third-party verification of the stated data rates, reach, or compliance claims. No field-deployment or interoperability results are included. The record does not specify which vehicle programs or OEMs have adopted the connector, and no information is supplied on volume production status, cost, or comparative performance against copper alternatives. Only one monitored company is represented in the supplied records, so no cross-company technical comparison is possible from this evidence set.",
+      "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector standard for in-vehicle data communication, positioned as a complement to existing coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 meters and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: a protocol-independent optical link at these rates and distances gives automotive network designers an alternative physical layer for high-bandwidth segments where copper reach or EMI behavior becomes limiting; IEEE 802.3cz alignment matters because it ties the connector to a defined multi-gigabit automotive optical Ethernet specification rather than a proprietary link.\n\nThe same announcement describes the system as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles). It supports OM3 and OM4 multimode fibers at 850 nm and 980 nm, is cited for Ethernet and PCIe-based applications, and is offered as a straight cable plug, straight cable coupler, and angled PCB connector (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: the angled PCB connector and coupler variants indicate the design targets board-level and in-harness integration points, not only cable-to-cable links. The stated Expanded-Beam Principle enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles), which addresses the field-serviceability concern that typically limits optical connectors in vehicle assembly and maintenance environments.\n\n## Evidence gaps\n\nOnly one publisher-dated record was supplied, covering a single company; no other monitored interconnect company has technical evidence in this set, so no activity is attributed to them. The record is a company announcement: it reports stated data rates, compliance claims, and test results but provides no independent test data, no qualification reports, and no field-deployment evidence. The announcement does not establish production availability, volume deployment, or adoption by any vehicle program, and no commercial outcome should be inferred from it. No comparative performance data against copper alternatives is supplied.",
       "item_ids": "[\"965a5d574adc6673ce28081b\"]",
-      "generated_at": "2026-11-01 16:43:52"
+      "generated_at": "2026-11-01 16:48:37"
     },
     {
       "month_start": "2026-09-01",
@@ -35616,5 +35593,5 @@
     "out_of_scope": 540,
     "stale": 31
   },
-  "built_at": "2026-11-01T16:44:13.730777+00:00"
+  "built_at": "2026-11-01T16:49:00.296185+00:00"
 }
