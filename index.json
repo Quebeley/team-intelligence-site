@@ -35011,6 +35011,55 @@
   ],
   "runs": [
     {
+      "id": 34,
+      "started_at": "2026-11-01 16:31:41",
+      "finished_at": "2026-11-01 16:31:41",
+      "counts": {
+        "already_stored": 1,
+        "blocked_date": 1,
+        "blocked_fetch": 5,
+        "blocked_index_page": 1,
+        "blocked_nonarticle_path": 8,
+        "blocked_nontech": 2,
+        "blocked_sponsored": 2,
+        "blocked_unapproved_publisher": 90,
+        "research service_queries": 19,
+        "mode": "industry_monthly",
+        "model_attempts": 2,
+        "model_rejected": 2,
+        "month_end": "2026-10-31",
+        "month_start": "2026-10-01",
+        "search_rows": 112,
+        "patent search service_queries": 11
+      },
+      "errors": [
+        "Amphenol: patent search service search failed (TimeoutError)",
+        "Amphenol: patent search service search failed (TimeoutError)",
+        "Amphenol: patent search service search failed (TimeoutError)",
+        "Molex: patent search service search failed (TimeoutError)",
+        "Foxconn Interconnect Technology: patent search service search failed (TimeoutError)",
+        "Yazaki: patent search service search failed (TimeoutError)",
+        "Rosenberger: patent search service search failed (TimeoutError)",
+        "Samtec: patent search service search failed (TimeoutError)"
+      ],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 710,
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 3022,
+          "prompt_tokens": 3022,
+          "total_tokens": 3732
+        },
+        "industry_monthly_digest": {
+          "completion_tokens": 556,
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 520,
+          "prompt_tokens": 520,
+          "total_tokens": 1076
+        }
+      }
+    },
+    {
       "id": 33,
       "started_at": "2026-10-31 15:57:24",
       "finished_at": "2026-10-31 15:57:24",
@@ -35406,44 +35455,6 @@
           "total_tokens": 29485
         }
       }
-    },
-    {
-      "id": 24,
-      "started_at": "2026-10-24 14:14:16",
-      "finished_at": "2026-10-24 14:14:16",
-      "counts": {
-        "briefs_generated": 8,
-        "cached": 157,
-        "candidates": 0,
-        "demoted_unverified_news": 0,
-        "errors": 0,
-        "fetched": 0,
-        "fetched_by_provider": {},
-        "included": 0,
-        "lookback_days": 14,
-        "mode": "score_pending",
-        "model_failures": 0,
-        "purged_unsuitable_sources": 0,
-        "scored": 0,
-        "unique_fetched": 0
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 1132,
-          "prompt_cache_hit_tokens": 10880,
-          "prompt_cache_miss_tokens": 256,
-          "prompt_tokens": 11136,
-          "total_tokens": 12268
-        },
-        "research service_topic_digest": {
-          "completion_tokens": 8013,
-          "prompt_cache_hit_tokens": 25344,
-          "prompt_cache_miss_tokens": 1734,
-          "prompt_tokens": 27078,
-          "total_tokens": 35091
-        }
-      }
     }
   ],
   "weeks": [
@@ -35579,10 +35590,10 @@
   "industry_months": [
     {
       "month_start": "2026-10-01",
-      "month_end": "2026-10-23",
-      "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector standard for in-vehicle data communication, positioned as a complement to existing coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 meters and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles). It is described as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests (same URL). The connector supports OM3 and OM4 multimode fiber at 850 nm and 980 nm, is protocol-independent (Ethernet and PCIe-based applications cited), and is offered as a straight cable plug, straight cable coupler, and angled PCB connector (same URL). Robustness is attributed in part to an Expanded-Beam Principle that enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear (same URL).\n\nEngineering implication: the announced combination of >50 Gbps over up to 40 m, IEEE 802.3cz compliance, and ISO 24581/ISO 8092/DIN 70214 alignment indicates a connector design intended to let automotive architects adopt optical links where copper reach or bandwidth becomes limiting, while the expanded-beam interface targets field robustness and mating durability. These are announced specifications and test claims, not independently verified results.\n\n## Evidence gaps\n\nOnly one publisher-dated record was supplied, covering a single company; no other monitored interconnect companies have dated technical records in this set, so no activity is reported for them. The record is a company announcement: the >50 Gbps, 40 m, compliance, and dust/water test claims are not corroborated by independent test data or standards-body listings. No production-release, qualification-completion, or volume-deployment evidence is provided, and no interoperability results beyond the stated IEEE 802.3cz compliance are given. The announcement date (2026-10-01) should be confirmed against the publisher's page before citing.",
+      "month_end": "2026-10-31",
+      "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector standard for in-vehicle data communication, positioned as a complement to existing coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 m and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: a protocol-independent optical link at these rates and reach gives automotive architects an alternative to copper for high-bandwidth segments, while the stated IEEE 802.3cz alignment matters because it ties the connector to a defined Ethernet physical-layer specification rather than a proprietary link.\n\nThe same announcement describes the system as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests. It supports OM3 and OM4 multimode fiber at 850 nm and 980 nm, is cited for Ethernet and PCIe-based applications, and is offered as a straight cable plug, straight cable coupler, and angled PCB connector. Robustness is attributed in part to an Expanded-Beam Principle that enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: the expanded-beam design and cited dust/water testing target the field-failure modes that have historically limited optical connectors in vehicles—contamination and end-face wear at mating interfaces—while the three form factors (plug, coupler, angled PCB connector) indicate coverage of both cable-to-cable and board-level integration points.\n\n## Evidence gaps\n\nAll technical claims here rest on a single company announcement; no independent test data, qualification reports, or third-party validation of the >50 Gbps, 40 m, or environmental results is supplied. The record does not state which ISO 24581 or IEEE 802.3cz test conditions were applied, sample sizes, or whether results reflect pre-production or production hardware. No link-layer performance data (latency, BER, link budget margins) is provided, and no information is given on interoperability testing with other 802.3cz implementations. The announcement does not establish adoption, volume production, or design wins, and no commercial inference should be drawn from it. No other monitored company has a publisher-dated technical record in this set, so no cross-company comparison is possible.",
       "item_ids": "[\"965a5d574adc6673ce28081b\"]",
-      "generated_at": "2026-10-23 18:28:40"
+      "generated_at": "2026-11-01 16:31:41"
     },
     {
       "month_start": "2026-09-01",
@@ -35599,5 +35610,5 @@
     "out_of_scope": 540,
     "stale": 31
   },
-  "built_at": "2026-10-31T15:57:47.422578+00:00"
+  "built_at": "2026-11-01T16:32:04.468092+00:00"
 }
