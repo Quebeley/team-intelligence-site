@@ -1,7 +1,7 @@
 'use strict';
 (() => {
  const el=id=>document.getElementById(id);
- let token='',ready=false,busy=false,history=[];
+ let token='',ready=false,busy=false,history=[],selectedIds=[];
  const api=JSON.parse(el('team-data').textContent).chat_api_url || '';
  const remote=!!api && api!==location.origin;
  let authorization='';
@@ -10,7 +10,8 @@
  const node=(tag,text,className)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(className)n.className=className;return n;};
  const safeLink=(url,text)=>{const a=node('a',text);try{const u=new URL(url);if(['http:','https:'].includes(u.protocol))a.href=u.href;}catch{}a.target='_blank';a.rel='noopener noreferrer';return a;};
  function error(message){el('chat-error').textContent=message;el('chat-error').hidden=!message;}
- function controls(){el('chat-send').disabled=!ready||busy;el('chat-reset').disabled=busy;el('chat-question').disabled=busy;el('chat-type').disabled=busy;}
+ function controls(){el('chat-send').disabled=!ready||busy;el('chat-reset').disabled=busy;el('chat-question').disabled=busy;el('chat-type').disabled=busy||selectedIds.length>0;}
+ function scope(){el('chat-scope').hidden=!selectedIds.length;controls();}
  async function request(path,payload){
   const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),300000);
   try{const r=await fetch(api+path,{method:'POST',headers:{'Content-Type':'application/json','X-Chat-Token':token,...headers()},body:JSON.stringify(payload),signal:controller.signal});
@@ -34,7 +35,7 @@
   const bytes=new TextEncoder().encode(el('chat-username').value+':'+el('chat-password').value);
   authorization='Basic '+btoa(String.fromCharCode(...bytes));el('chat-password').value='';await status();
  });
- el('chat-logout').onclick=()=>{authorization='';token='';ready=false;history=[];el('chat-messages').innerHTML=welcome;examples();status();};
+ el('chat-logout').onclick=()=>{authorization='';token='';ready=false;history=[];selectedIds=[];scope();el('chat-messages').innerHTML=welcome;examples();status();};
  function examples(){document.querySelectorAll('#chat-examples button').forEach(b=>b.onclick=()=>{el('chat-question').value=b.dataset.question;el('chat-question').focus();});}
  function renderAnswer(result){
   const box=node('article',null,'chat-answer');box.append(node('p','RESEARCH ASSISTANT','eyebrow'));
@@ -64,12 +65,21 @@
   error('');busy=true;controls();document.querySelector('.chat-welcome')?.remove();
   const questionBox=node('article',null,'chat-question');questionBox.append(node('p','YOU','eyebrow'),node('p',question));el('chat-messages').append(questionBox);
   el('chat-progress').textContent='Searching stored evidence and checking source quotations…';
-  try{const result=await request('/api/chat',{question,history:history.slice(-8),document_type:el('chat-type').value});
+  try{const result=await request('/api/chat',{question,history:history.slice(-8),document_type:el('chat-type').value,selected_ids:selectedIds.length?selectedIds:null});
    const text=renderAnswer(result);history.push({role:'user',content:question},{role:'assistant',content:text.slice(0,1500)});el('chat-question').value='';
   }catch(e){error(e.name==='AbortError'?'The answer timed out. Please retry your question.':e.message);questionBox.remove();}
   finally{busy=false;el('chat-progress').textContent='';controls();el('chat-question').focus();}
  });
  el('chat-question').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();if(ready&&!busy)el('chat-form').requestSubmit();}});
- el('chat-reset').onclick=()=>{history=[];el('chat-messages').innerHTML=welcome;el('chat-question').value='';error('');examples();};
+ el('chat-reset').onclick=()=>{history=[];selectedIds=[];scope();el('chat-messages').innerHTML=welcome;el('chat-question').value='';error('');examples();};
+ el('chat-clear-scope').onclick=()=>{selectedIds=[];scope();el('chat-type').value='';};
+ window.addEventListener('research:compare',event=>{
+  selectedIds=event.detail.ids.slice(0,4);
+  history=[];el('chat-messages').innerHTML=welcome;examples();error('');
+  el('chat-type').value='';
+  el('chat-scope-description').textContent=`Restricted to ${selectedIds.length} selected publications. Answers cite their stored source passages.`;
+  el('chat-question').value=`Compare these ${selectedIds.length} publications by technical method, supporting evidence, engineering implications, and limitations. State any gaps clearly.`;
+  scope();setTimeout(()=>el('chat-question').focus(),0);
+ });
  examples();status();
 })();

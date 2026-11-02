@@ -18,7 +18,7 @@ const pending = data.records.filter(r=>r.status==='candidate');
 const historicalPatent = r => r.document_type==='patent' && r.published_date && (Date.parse(data.built_at)-Date.parse(r.published_date))>60*86400000;
 let track='', briefTrack='', filtered=[], pageSize=30;
 
-function card(r){
+function card(r,compareEnabled=false){
  const details=r.score_details||{};
  const sourceText=r.summary||r.abstract||'No source abstract available.';
  const preview=sourceText.length>420?sourceText.slice(0,420)+'…':sourceText;
@@ -26,7 +26,8 @@ function card(r){
  const evidence=list(details.evidence).map(q=>`<p>“${esc(q)}”</p>`).join('');
  const meta=r.evidence_meta||{};
  const coverage=meta.status==='abstract_and_claims'?`Abstract + ${r.claims.length} claims`:meta.status==='article_excerpt'?`Accessible excerpt - ${Number(meta.body_characters).toLocaleString()} characters`:meta.status==='article_text'?`Article text · ${Number(meta.body_characters).toLocaleString()} characters`:meta.status==='unavailable'?'Limited evidence · source unavailable':meta.status==='partial'?'Partial source evidence':r.content_kind.replaceAll('_',' ');
- return `<article class="card"><div class="card-top"><span class="type-label">${esc(r.document_type)} · ${esc(coverage)}</span>${score}</div>
+ const picker=compareEnabled && ['paper','patent'].includes(r.document_type)?`<label class="compare-pick"><input type="checkbox" data-compare-id="${esc(r.id)}" ${window.researchWorkspace?.isSelected(r.id)?'checked':''}> Add to comparison</label>`:'';
+ return `<article class="card">${picker}<div class="card-top"><span class="type-label">${esc(r.document_type)} · ${esc(coverage)}</span>${score}</div>
  <h3>${anchor(r.url,r.title)}</h3><div class="meta">${esc(r.source_name)} · ${r.source_aliases?.length>1?`<details><summary>${r.source_aliases.length} source records merged</summary>${r.source_aliases.map(a=>`<p>${anchor(a.url,a.source_name)}</p>`).join('')}</details>`:''}
  ${meta.discovery?.date_basis&&r.published_date?'Index date (unverified): ':''}${esc(r.published_date||'Publication date unknown')} ${r.publication_number?' · '+esc(r.publication_number):''}${historicalPatent(r)?' · HISTORICAL PATENT':''}</div>
  ${r.assignees.length?`<p class="meta">ASSIGNEE · ${esc(r.assignees.join('; '))}</p>`:''}
@@ -80,15 +81,17 @@ function renderLibrary(reset=true){
  const sort=$('sort').value;
  filtered.sort((a,b)=>sort==='newest'?recordDate(b).localeCompare(recordDate(a)):sort==='relevance'?(b.relevance_score||0)-(a.relevance_score||0):sort==='priority'?priority(b)-priority(a):balancedScore(b)-balancedScore(a) || priority(b)-priority(a) || recordDate(b).localeCompare(recordDate(a)));
  $('result-count').textContent=`${filtered.length} records · ${$('status').value==='candidate'?'Source material awaiting assessment':'Searches the stored collection'}`;
- $('results').innerHTML=filtered.length?filtered.slice(0,pageSize).map(card).join(''):empty('No matching records.','Try another track, remove a filter, or switch to Pending review to inspect newly captured material.');
+ $('results').innerHTML=filtered.length?filtered.slice(0,pageSize).map(r=>card(r,true)).join(''):empty('No matching records.','Try another track, remove a filter, or switch to Pending review to inspect newly captured material.');
  $('more').hidden=pageSize>=filtered.length;
+ window.researchWorkspace?.updateSelectionControls();
 }
 function route(){
- const name=['overview','archive','briefs','sources','chat'].includes(location.hash.slice(1))?location.hash.slice(1):'overview';
+ const name=['overview','changes','archive','compare','briefs','sources','chat','suggest'].includes(location.hash.slice(1))?location.hash.slice(1):'overview';
  document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!==name);
  document.querySelectorAll('nav a').forEach(a=>{a.classList.toggle('active',a.dataset.view===name);if(a.dataset.view===name)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.querySelector('.hero').hidden=name!=='overview';document.querySelector('.metrics').hidden=name!=='overview';
  if(name==='archive')renderLibrary();
+ window.researchWorkspace?.onRoute(name);
 }
 const latest=data.runs.find(r=>!['score_pending','briefs_only'].includes(r.counts.mode));
 $('updated').textContent=latest?`Last update · ${latest.started_at} UTC`:'No collection has run yet';
@@ -145,3 +148,4 @@ renderBriefs();
 $('more').onclick=()=>{pageSize+=30;renderLibrary(false);};
 $('export').onclick=()=>{const blob=new Blob([JSON.stringify(filtered,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='research-results.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 window.addEventListener('hashchange',route);showOverview();renderLibrary();route();
+window.researchSite={data,names,esc,anchor,card,empty,priority,ranked,route,renderLibrary,$};
