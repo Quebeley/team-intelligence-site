@@ -44900,6 +44900,51 @@
   ],
   "runs": [
     {
+      "id": 40,
+      "started_at": "2026-11-02 22:34:47",
+      "finished_at": "2026-11-02 22:34:47",
+      "counts": {
+        "already_stored": 1,
+        "blocked_date": 2,
+        "blocked_fetch": 8,
+        "blocked_index_page": 1,
+        "blocked_nonarticle_path": 13,
+        "blocked_nontech": 5,
+        "blocked_sponsored": 2,
+        "blocked_unapproved_publisher": 88,
+        "blocked_unsupported_document": 4,
+        "research service_queries": 19,
+        "mode": "industry_monthly",
+        "model_attempts": 3,
+        "model_rejected": 3,
+        "month_end": "2026-10-31",
+        "month_start": "2026-10-01",
+        "search_rows": 132,
+        "patent search service_queries": 16
+      },
+      "errors": [
+        "Amphenol: patent search service search failed (TimeoutError)",
+        "Yazaki: patent search service search failed (TimeoutError)",
+        "Yazaki: patent search service search failed (TimeoutError)"
+      ],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 928,
+          "prompt_cache_hit_tokens": 2432,
+          "prompt_cache_miss_tokens": 3321,
+          "prompt_tokens": 5753,
+          "total_tokens": 6681
+        },
+        "industry_monthly_digest": {
+          "completion_tokens": 499,
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 136,
+          "prompt_tokens": 520,
+          "total_tokens": 1019
+        }
+      }
+    },
+    {
       "id": 39,
       "started_at": "2026-11-02 21:21:20",
       "finished_at": "2026-11-02 21:21:20",
@@ -45289,44 +45334,6 @@
           "total_tokens": 33608
         }
       }
-    },
-    {
-      "id": 30,
-      "started_at": "2026-10-28 16:58:09",
-      "finished_at": "2026-10-28 16:58:09",
-      "counts": {
-        "briefs_generated": 8,
-        "cached": 310,
-        "candidates": 0,
-        "demoted_unverified_news": 0,
-        "errors": 0,
-        "fetched": 0,
-        "fetched_by_provider": {},
-        "included": 0,
-        "lookback_days": 14,
-        "mode": "score_pending",
-        "model_failures": 0,
-        "purged_unsuitable_sources": 0,
-        "scored": 0,
-        "unique_fetched": 0
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 991,
-          "prompt_cache_hit_tokens": 18304,
-          "prompt_cache_miss_tokens": 234,
-          "prompt_tokens": 18538,
-          "total_tokens": 19529
-        },
-        "research service_topic_digest": {
-          "completion_tokens": 4543,
-          "prompt_cache_hit_tokens": 28032,
-          "prompt_cache_miss_tokens": 1275,
-          "prompt_tokens": 29307,
-          "total_tokens": 33850
-        }
-      }
     }
   ],
   "weeks": [
@@ -45526,9 +45533,9 @@
     {
       "month_start": "2026-10-01",
       "month_end": "2026-10-31",
-      "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector standard for in-vehicle data communication, positioned as a complement to existing coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 meters and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: a protocol-independent optical link at these rates and distances gives automotive network designers an alternative physical layer for high-bandwidth segments where copper reach or EMI behavior becomes limiting; IEEE 802.3cz alignment matters because it ties the connector to a defined multi-gigabit automotive optical Ethernet specification rather than a proprietary link.\n\nThe same announcement describes the system as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles). It supports OM3 and OM4 multimode fibers at 850 nm and 980 nm, is cited for Ethernet and PCIe-based applications, and is offered as a straight cable plug, straight cable coupler, and angled PCB connector (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: the angled PCB connector and coupler variants indicate the design targets board-level and in-harness integration points, not only cable-to-cable links. The stated Expanded-Beam Principle enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles), which addresses the field-serviceability concern that typically limits optical connectors in vehicle assembly and maintenance environments.\n\n## Evidence gaps\n\nOnly one publisher-dated record was supplied, covering a single company; no other monitored interconnect company has technical evidence in this set, so no activity is attributed to them. The record is a company announcement: it reports stated data rates, compliance claims, and test results but provides no independent test data, no qualification reports, and no field-deployment evidence. The announcement does not establish production availability, volume deployment, or adoption by any vehicle program, and no commercial outcome should be inferred from it. No comparative performance data against copper alternatives is supplied.",
+      "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector system for in-vehicle data communication, positioned as a complement to coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 meters and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: a standards-aligned optical link at this rate/distance class gives automotive network designers a fiber option alongside copper for high-bandwidth in-vehicle segments, with protocol independence (Ethernet and PCIe-based applications cited) allowing reuse across link types.\n\nThe same announcement describes the system as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests. It supports OM3 and OM4 multimode fiber at 850 nm and 980 nm and is offered as a straight cable plug, straight cable coupler, and angled PCB connector. Robustness is attributed in part to an Expanded-Beam Principle that enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: the expanded-beam design and cited environmental qualifications target the contamination and durability concerns that have limited optical connectors in vehicle harnesses; the three form factors (plug, coupler, angled PCB connector) indicate provision for both cable-to-cable and board-level integration points.\n\n## Evidence gaps\n\nAll technical claims here rest on a single company announcement; no independent test reports, qualification certificates, or third-party verification of the >50 Gbps, 40 m, IEEE 802.3cz, ISO 24581, ISO 8092, DIN 70214, or dust/water results were supplied. The record gives no measured link margin, insertion-loss, temperature-range, vibration, or lifetime data, and no indication of production readiness or deployment. No other monitored interconnect company has a publisher-dated technical record in this set, so no cross-company comparison is possible; absence of records is not evidence of inactivity.",
       "item_ids": "[\"965a5d574adc6673ce28081b\"]",
-      "generated_at": "2026-11-01 16:48:37"
+      "generated_at": "2026-11-02 22:34:47"
     },
     {
       "month_start": "2026-09-01",
@@ -45545,5 +45552,5 @@
     "out_of_scope": 609,
     "stale": 24
   },
-  "built_at": "2026-11-02T22:23:38.532974+00:00"
+  "built_at": "2026-11-02T22:35:15.456308+00:00"
 }
