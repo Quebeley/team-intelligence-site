@@ -67,7 +67,7 @@ function showOverview(){
   $('industry-library-link').onclick=()=>openTrackLibrary('industry');
   $('industry-brief-link').onclick=()=>{briefTrack='industry';renderBriefs();};
  }
- const rows=ranked(reviewed.filter(r=>!track||r.topics.includes(track))).slice(0,10);
+ const rows=ranked(reviewed.filter(r=>!track||r.topics.includes(track))).slice(0,4);
  $('featured').innerHTML=rows.length?rows.map(card).join(''):empty('Your next signal is on its way.',pending.length?`${pending.length} relevant records have been captured and are awaiting review. Approved results will appear here after scoring.`:'The first collection is ready to run. Once sources are connected, reviewed developments will appear here.','<a href="#archive" id="pending-link">Browse pending records ↗</a>');
  const link=$('pending-link'); if(link)link.onclick=()=>{$('status').value='candidate';renderLibrary();};
 }
@@ -87,9 +87,10 @@ function renderLibrary(reset=true){
 }
 function route(){
  const name=['overview','changes','archive','compare','briefs','sources','chat','suggest'].includes(location.hash.slice(1))?location.hash.slice(1):'overview';
+ const navName=name==='changes'?'overview':name==='compare'?'archive':name;
  document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!==name);
- document.querySelectorAll('nav a').forEach(a=>{a.classList.toggle('active',a.dataset.view===name);if(a.dataset.view===name)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
- document.querySelector('.hero').hidden=name!=='overview';document.querySelector('.metrics').hidden=name!=='overview';
+ document.querySelectorAll('nav a').forEach(a=>{a.classList.toggle('active',a.dataset.view===navName);if(a.dataset.view===navName)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ document.querySelector('.hero').hidden=name!=='overview';
  if(name==='archive')renderLibrary();
  window.researchWorkspace?.onRoute(name);
 }
@@ -147,5 +148,6 @@ renderBriefs();
 ['search','topic','type','status','from','sort'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>renderLibrary()));
 $('more').onclick=()=>{pageSize+=30;renderLibrary(false);};
 $('export').onclick=()=>{const blob=new Blob([JSON.stringify(filtered,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='research-results.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+function openBriefTrack(id){briefTrack=id;renderBriefs();location.hash='#briefs';route();}
 window.addEventListener('hashchange',route);showOverview();renderLibrary();route();
-window.researchSite={data,names,esc,anchor,card,empty,priority,ranked,route,renderLibrary,$};
+window.researchSite={data,names,esc,anchor,card,empty,priority,ranked,route,renderLibrary,openBriefTrack,$};

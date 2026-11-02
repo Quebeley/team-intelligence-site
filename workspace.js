@@ -1,6 +1,6 @@
 'use strict';
 (() => {
- const {data,names,esc,anchor,card,empty,priority,ranked,route,renderLibrary,$}=window.researchSite;
+ const {data,names,esc,anchor,card,empty,priority,ranked,route,renderLibrary,openBriefTrack,$}=window.researchSite;
  const records=new Map(data.records.map(record=>[record.id,record]));
  const selected=new Set();
  const weeklyTracks=data.topics.filter(topic=>topic.cadence!=='monthly');
@@ -32,6 +32,65 @@
  const since=Number.isFinite(Date.parse(previousVisit))?Date.parse(previousVisit):Date.parse(data.built_at)-7*86400000;
  const sinceVisit=data.records.filter(record=>record.status==='included' && capturedAt(record)>since);
  let changeScope='brief', changeTrack='', changeLimit=15;
+
+ function renderRadar(){
+  if(!latest){
+   $('radar-period').textContent='Awaiting the first published weekly brief.';
+   $('radar-metrics').innerHTML='';
+   $('radar-tracks').innerHTML=empty('No weekly signals yet.','The radar appears after a completed weekly collection.');
+   $('radar-highlights').innerHTML='';
+   $('radar-industry').innerHTML='';
+   return;
+  }
+  const latestRecords=ids(latest.item_ids).map(id=>records.get(id)).filter(record=>record?.status==='included');
+  const countFor=(topicId,weekStart)=>ids((data.topic_weeks||[]).find(week=>
+   week.topic_id===topicId && week.week_start===weekStart)?.item_ids).length;
+  const topicCounts=weeklyTracks.map(topic=>({topic,current:countFor(topic.id,latest.week_start),
+   previous:preceding?countFor(topic.id,preceding.week_start):null}));
+  const maxCount=Math.max(1,...topicCounts.flatMap(row=>[row.current,row.previous||0]));
+  const generated=latest.generated_at?new Date(latest.generated_at.replace(' ','T')+'Z'):null;
+  const when=generated && Number.isFinite(generated.getTime())?new Intl.DateTimeFormat('en-US',{
+   timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'
+  }).format(generated):'';
+  $('radar-period').textContent=`${latest.week_start} – ${latest.week_end}${when?' · Brief generated '+when:''}`;
+  $('radar-metrics').innerHTML=[
+   [newInBrief.length,preceding?'New vs previous brief':'Selected this week'],
+   [latestRecords.filter(record=>priority(record)>=80).length,'Priority 80+'],
+   [`${topicCounts.filter(row=>row.current>0).length}/${weeklyTracks.length}`,'Tracks with signals']
+  ].map(([number,label])=>`<div><strong>${esc(number)}</strong><span>${esc(label)}</span></div>`).join('');
+  $('radar-tracks').innerHTML=topicCounts.map(({topic,current,previous})=>
+   `<button class="radar-track" type="button" data-track="${esc(topic.id)}" aria-label="Read the ${esc(topic.name)} weekly brief: ${current} selected records this week${previous==null?'':`, ${previous} last week`}">
+    <span class="radar-track-name">${esc(topic.name)}</span><span class="radar-track-bars" aria-hidden="true"><i style="width:${Math.round(current/maxCount*100)}%"></i><i class="prior" style="width:${Math.round((previous||0)/maxCount*100)}%"></i></span>
+    <span class="radar-track-count">${current}<small>${previous==null?'this week':` vs ${previous} last week`}</small></span></button>`).join('');
+  $('radar-tracks').querySelectorAll('button').forEach(button=>button.onclick=()=>openBriefTrack(button.dataset.track));
+
+  const bullets=[];
+  let inOpening=false;
+  for(const line of String(latest.synthesis_md||'').split(/\r?\n/)){
+   if(/^##\s+/.test(line)){if(inOpening)break;inOpening=true;continue;}
+   if(!inOpening || !/^[-*]\s+/.test(line))continue;
+   const raw=line.replace(/^[-*]\s+/,'');
+   const links=[...raw.matchAll(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g)];
+   if(!links.length)continue;
+   const label=raw.match(/^\*\*([^*]+)\*\*\s*/);
+   const description=raw.replace(/^\*\*[^*]+\*\*\s*/,'')
+    .replace(/\s*\(\[[^\]]+\]\(https?:\/\/[^\s)]+\)\)/g,'')
+    .replace(/\[([^\]]+)\]\(https?:\/\/[^\s)]+\)/g,'$1').replaceAll('**','').trim();
+   bullets.push({title:label?label[1].replace(/:\s*$/,''):links[0][1],description,url:links[0][2]});
+   if(bullets.length===3)break;
+  }
+  for(const record of ranked(newInBrief)){
+   if(bullets.length>=3)break;
+   if(bullets.some(bullet=>bullet.url===record.url))continue;
+   bullets.push({title:record.title,description:(record.why_it_matters||record.summary||record.abstract||'').slice(0,300),url:record.url});
+  }
+  $('radar-highlights').innerHTML=bullets.length?bullets.map((bullet,index)=>
+   `<article class="radar-highlight"><span class="eyebrow">SIGNAL ${String(index+1).padStart(2,'0')}</span><h4>${esc(bullet.title)}</h4><p>${esc(bullet.description)}</p>${anchor(bullet.url,'Open source ↗')}</article>`).join(''):
+   empty('No sourced highlights yet.','Read the weekly brief after the next completed collection.');
+  const monthCount=ids(latestMonth?.item_ids).filter(id=>records.get(id)?.status==='included').length;
+  $('radar-industry').innerHTML=latestMonth?`<button class="radar-industry" type="button"><span>MONTHLY COMPANY RADAR</span><b>Industry Dynamics · ${esc(latestMonth.month_start.slice(0,7))}</b><small>${monthCount} selected technical ${monthCount===1?'update':'updates'} · Read monthly brief ↗</small></button>`:'';
+  $('radar-industry').querySelector('button')?.addEventListener('click',()=>openBriefTrack('industry'));
+ }
 
  function changeRows(){
   const rows=changeScope==='visit'?sinceVisit:changeScope==='industry'?newInMonth:newInBrief;
@@ -156,5 +215,6 @@
   if(name==='compare')renderCompare();
  }};
  updateSelectionControls();
+ renderRadar();
  route();
 })();
