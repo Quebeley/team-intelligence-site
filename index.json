@@ -6618,6 +6618,117 @@
       "previous_assessment": null
     },
     {
+      "id": "e6c811a9393df99e33f9d221",
+      "title": "Spot Coating Helps EV Manufacturer Reduce Material Use ...",
+      "url": "https://www.aptiv.com/en/insights/article/spot-coating-helps-ev-manufacturer-reduce-material-use-in-busbars",
+      "source_name": "www.aptiv.com",
+      "source_type": "industry_news",
+      "document_type": "news",
+      "publication_number": null,
+      "assignees": [],
+      "authors": [],
+      "published_date": "2026-10-30",
+      "fetched_date": "2026-11-03",
+      "priority_date": null,
+      "filing_date": null,
+      "content_kind": "full_text",
+      "abstract": "Aptiv's spot coating process applies protection only where needed, helping reduce material usage, chemical consumption and emissions in busbar manufacturing.",
+      "summary": "Aptiv describes a spot coating process for high-voltage EV busbars that applies protective nickel and tin only at electrical connection points rather than over the entire conductor. The process replaces multi-bath electrolytic rack coating with sandblasting for surface preparation followed by arc spraying, in which an electric arc melts coating material and compressed air deposits it onto targeted areas. Aptiv reports that across two EV programs scheduled for 2026–2030, coated surface area falls from roughly 160,000 m² under conventional rack coating to about 2,400 m², a 98% reduction, with a reported 97% reduction in CO2-equivalent emissions over the project lifetime and elimination of process water use. The article also notes that spot coating has higher emissions intensity per square meter (16.096 vs 10.476 kg CO2 eq/m²) but that the much smaller coated area drives the overall reduction. These are company-reported figures from an Aptiv insight article, not independently peer-reviewed results.",
+      "why_it_matters": "For busbar manufacturing, the environmental benefit comes from coating-area reduction rather than lower per-area emissions intensity, so the process economics and footprint depend on how small the required contact area is relative to the full part.",
+      "relevance_score": 82.0,
+      "quality_score": 66.0,
+      "score_details": {
+        "relevance": 82,
+        "quality": 66,
+        "novelty": 55,
+        "engineering_value": 70,
+        "confidence": 72,
+        "reason": "The article describes a concrete manufacturing change for EV busbar contact surfaces: replacing full-surface rack electroplating (nickel/tin chemical baths) with targeted arc-spray spot coating after sandblasting, applied only at electrical connection points. This is directly relevant to plating/contact surfaces and battery interconnects, with quantified reductions in coated area, water and chemical use. However, it is a company-authored insight article with limited process detail, no independent verification, and a notable caveat that per-area emission intensity is actually higher (16.096 vs 10.476 kg CO2eq/m2), so environmental benefits depend on the reduced coated area.",
+        "theme": "Targeted arc-spray spot coating of EV busbar connection points replacing full-surface electroplating",
+        "topics": [
+          "plating",
+          "battery"
+        ],
+        "evidence": [
+          "Aptiv developed and optimized a spot coating process for busbar applications that eliminates water consumption and lowers emissions without compromising performance.",
+          "Then, the system feeds a coating material into an arc spray device, where an electric arc melts the material. Compressed air deposits the molten material onto specific areas of the busbar — targeting only the connection points.",
+          "Over the lifetime of the programs, Aptiv’s approach reduces the coated surface area by 98 percent",
+          "Although spot coating generates a higher emissions intensity per square meter, the process dramatically reduces the amount of coated surface required."
+        ],
+        "limitations": "Company-authored promotional insight; no independent verification, no detailed process parameters (arc current, spray distance, coating thickness, adhesion/porosity data), and no electrical contact resistance or corrosion test data. Per-area emission intensity is higher for spot coating, so environmental claims depend on area-reduction assumptions. Publisher date is future-dated relative to typical sources and should be treated cautiously.",
+        "verified": true,
+        "priority": 72.5,
+        "initial_assessment": {
+          "relevance": 82,
+          "quality": 68,
+          "novelty": 55,
+          "engineering_value": 70,
+          "confidence": 72,
+          "reason": "The article describes a concrete change in busbar contact-surface coating: replacing full rack electroplating (nickel/tin baths) with targeted arc-spray spot coating after sandblasting, applied only at electrical connection points. This is directly relevant to plating/contact surfaces and battery interconnects, with quantified material, water and emission reductions. However, it is a company insight article with limited process detail, no independent verification, and a notable caveat that per-area emission intensity is actually higher (16.096 vs 10.476 kg CO2eq/m2), so benefits depend on reduced coated area.",
+          "theme": "Targeted arc-spray spot coating of EV busbar connection points replacing full-surface electroplating",
+          "topics": [
+            "plating",
+            "battery"
+          ],
+          "evidence": [
+            "Aptiv developed and optimized a spot coating process for busbar applications that eliminates water consumption and lowers emissions without compromising performance.",
+            "Then, the system feeds a coating material into an arc spray device, where an electric arc melts the material. Compressed air deposits the molten material onto specific areas of the busbar — targeting only the connection points.",
+            "Over the lifetime of the programs, Aptiv’s approach reduces the coated surface area by 98 percent",
+            "Although spot coating generates a higher emissions intensity per square meter, the process dramatically reduces the amount of coated surface required."
+          ],
+          "limitations": "Company-authored promotional insight; no independent verification, no detailed process parameters (arc current, spray distance, coating thickness, adhesion/porosity data), no electrical contact resistance or corrosion test data. Per-area emission intensity is higher for spot coating, so environmental claims depend on area reduction assumptions. Publisher date is future-dated relative to typical sources and should be treated cautiously."
+        }
+      },
+      "score_reason": "The article describes a concrete manufacturing change for EV busbar contact surfaces: replacing full-surface rack electroplating (nickel/tin chemical baths) with targeted arc-spray spot coating after sandblasting, applied only at electrical connection points. This is directly relevant to plating/contact surfaces and battery interconnects, with quantified reductions in coated area, water and chemical use. However, it is a company-authored insight article with limited process detail, no independent verification, and a notable caveat that per-area emission intensity is actually higher (16.096 vs 10.476 kg CO2eq/m2), so environmental benefits depend on the reduced coated area.",
+      "status": "included",
+      "claims": [],
+      "body_text": "Spot Coating Helps EV Manufacturer Reduce Material Use in Busbars\nSpot Coating Helps EV Manufacturer Reduce Material Use in Busbars\nA North American electric vehicle manufacturer wanted to support large-scale production programs while reducing their environmental impact. One area of focus was busbars, a major component of high-voltage electrical architectures that transfers power to key vehicle systems.\nBusbars are long, solid metal conductors. To prevent corrosion, maintain stable electrical connections and ensure long-term durability, part of the manufacturing process is to apply a protective coating to the busbars.\nAptiv developed and optimized a spot coating process for busbar applications that eliminates water consumption and lowers emissions without compromising performance.\nManufacturers traditionally coat busbars through a rack coating process. During this process, they immerse each component in multiple chemical baths and use electricity to apply a uniform layer of nickel, tin or other protective material. Although effective, this process coats far more surface area than the application requires.\nMany busbar applications require protection only at the connection points where electrical contact occurs. When manufacturers coat the entire busbar, they increase material consumption and use significant amounts of water and energy. As vehicle programs scale into hundreds of thousands of units, the unnecessary coatings create a larger environmental impact.\nA Breakthrough in Sustainable Manufacturing\nAptiv’s spot coating process applies protective material only where it is needed to overcome the limitations of traditional coating methods.\nThe process begins with sandblasting, which removes any existing oxidation and creates a rough contact surface. Then, the system feeds a coating material into an arc spray device, where an electric arc melts the material. Compressed air deposits the molten material onto specific areas of the busbar — targeting only the connection points.\nThis approach ensures corrosion resistance, contact stability and durability while significantly reducing resource consumption. Because the process eliminates chemical baths, it removes the water-intensive treatment stages associated with classic galvanization.\nTraditional Rack Coating vs. Aptiv Spot Coating\n| | RACK COATING | APTIV SPOT COATING |\n| Pretreatment of Aluminum | Degreasing, rinsing, etching/pickling with NaOH or acidic pickling solution, neutralization, desmutting, activation, double zincate process | Sand blasting |\n| Nickel Layer | (Electrolytic plating) Nickel sulfate or nickel chloride, boric acid, organic additives | Spot coating |\n| Tin Layer | (Electrolytic plating) Tin sulfate, sulfuric acid, organic additives | Spot coating |\n| Post-Treatment | Multi-stage rinsing, optional passivization, drying | Not necessary |\n| Emission Intensity | 10.476 kg ( \\text{CO}_2 \\text{eq/m}^2 ) | 16.096 kg ( \\text{CO}_2 \\text{eq/m}^2 ) |\n| Major Impact | Coating material, chemicals like (NaOH, boric acid, HNO₃, sulfuric acid, additives etc.), energy and water consumption | Coating material, energy |\nA comparison of traditional rack coating and Aptiv’s spot coating process. Unlike traditional rack coating, which covers the entire busbar, Aptiv’s spot coating process applies nickel and tin only to connection areas, reducing the amount of coated surface throughout the product lifecycle.\nDramatic Results\nAptiv evaluated the impact of spot coating across two of the manufacturer’s electric vehicle programs, scheduled to run from 2026 through 2030. Across both programs, conventional rack coating would have required approximately 160,000 square meters of coated busbar surface. By coating only the areas required for electrical contact, Aptiv reduced the coated area to approximately 2,400 square meters.\nOver the lifetime of the programs, Aptiv’s approach reduces the coated surface area by 98 percent and has several substantial environmental benefits: It reduces CO2-equivalent emissions by 97 percent over the project lifetime; it eliminates process water consumption compared to traditional coating processes that can require 50 to 150 liters of water per square meter; and it reduces chemical usage by eliminating multiple chemical bath stages.\nAlthough spot coating generates a higher emissions intensity per square meter, the process dramatically reduces the amount of coated surface required. By applying protection only where it is needed, Aptiv developed a more resource-efficient solution that supports vehicle performance and sustainability goals.\nChallenge\n- Protect high-voltage busbars from corrosion while maintaining long-term performance\n- Reduce environmental impact of traditional coating processes\nMinimize water consumption, chemical use and emissions\nSolution\n- Optimized a spot coating process that applies material only to needed connection areas\n- Replaced chemical processes with sandblasting to prep the surface\nReplaced water-intensive galvanization with targeted arc spray\nResults\n- Reduced coated surface area by 98%\n- Reduced total emissions by 97%\n- Eliminated process water consumption\n- Reduced chemical usage\nA North American electric vehicle manufacturer wanted to support large-scale production programs while reducing their environmental impact. One area of focus was busbars, a major component of high-voltage electrical architectures that transfers power to key vehicle systems.\nBusbars are long, solid metal conductors. To prevent corrosion, maintain stable electrical connections and ensure long-term durability, part of the manufacturing process is to apply a protective coating to the busbars.\nAptiv developed and optimized a spot coating process for busbar applications that eliminates water consumption and lowers emissions without compromising performance.\nManufacturers traditionally coat busbars through a rack coating process. During this process, they immerse each component in multiple chemical baths and use electricity to apply a uniform layer of nickel, tin or other protective material. Although effective, this process coats far more surface area than the application requires.\nMany busbar applications require protection only at the connection points where electrical contact occurs. When manufacturers coat the entire busbar, they increase material consumption and use significant amounts of water and energy. As vehicle programs scale into hundreds of thousands of units, the unnecessary coatings create a larger environmental impact.\nA Breakthrough in Sustainable Manufacturing\nAptiv’s spot coating process applies protective material only where it is needed to overcome the limitations of traditional coating methods.\nThe process begins with sandblasting, which removes any existing oxidation and creates a rough contact surface. Then, the system feeds a coating material into an arc spray device, where an electric arc melts the material. Compressed air deposits the molten material onto specific areas of the busbar — targeting only the connection points.\nThis approach ensures corrosion resistance, contact stability and durability while significantly reducing resource consumption. Because the process eliminates chemical baths, it removes the water-intensive treatment stages associated with classic galvanization.\nTraditional Rack Coating vs. Aptiv Spot Coating\n| | RACK COATING | APTIV SPOT COATING |\n| Pretreatment of Aluminum | Degreasing, rinsing, etching/pickling with NaOH or acidic pickling solution, neutralization, desmutting, activation, double zincate process | Sand blasting |\n| Nickel Layer | (Electrolytic plating) Nickel sulfate or nickel chloride, boric acid, organic additives | Spot coating |\n| Tin Layer | (Electrolytic plating) Tin sulfate, sulfuric acid, organic additives | Spot coating |\n| Post-Treatment | Multi-stage rinsing, optional passivization, drying | Not necessary |\n| Emission Intensity | 10.476 kg ( \\text{CO}_2 \\text{eq/m}^2 ) | 16.096 kg ( \\text{CO}_2 \\text{eq/m}^2 ) |\n| Major Impact | Coating material, chemicals like (NaOH, boric acid, HNO₃, sulfuric acid, additives etc.), energy and water consumption | Coating material, energy |\nA comparison of traditional rack coating and Aptiv’s spot coating process. Unlike traditional rack coating, which covers the entire busbar, Aptiv’s spot coating process applies nickel and tin only to connection areas, reducing the amount of coated surface throughout the product lifecycle.\nDramatic Results\nAptiv evaluated the impact of spot coating across two of the manufacturer’s electric vehicle programs, scheduled to run from 2026 through 2030. Across both programs, conventional rack coating would have required approximately 160,000 square meters of coated busbar surface. By coating only the areas required for electrical contact, Aptiv reduced the coated area to approximately 2,400 square meters.\nOver the lifetime of the programs, Aptiv’s approach reduces the coated surface area by 98 percent and has several substantial environmental benefits: It reduces CO2-equivalent emissions by 97 percent over the project lifetime; it eliminates process water consumption compared to traditional coating processes that can require 50 to 150 liters of water per square meter; and it reduces chemical usage by eliminating multiple chemical bath stages.\nAlthough spot coating generates a higher emissions intensity per square meter, the process dramatically reduces the amount of coated surface required. By applying protection only where it is needed, Aptiv developed a more resource-efficient solution that supports vehicle performance and sustainability goals.\nChallenge\n- Protect high-voltage busbars from corrosion while maintaining long-term performance\n- Reduce environmental impact of traditional coating processes\nMinimize water consumption, chemical use and emissions\nSolution\n- Optimized a spot coating process that applies material only to needed connection areas\n- Replaced chemical processes with sandblasting to prep the surface\nReplaced water-intensive galvanization with targeted arc spray\nResults\n- Reduced coated surface area by 98%\n- Reduced total emissions by 97%\n- Eliminated process water consumption\n- Reduced chemical usage\nCareers\nShape the future of mobility. Join our team to help create vehicles that are safer, greener and more connected.\nView Related Jobs",
+      "evidence_meta": {
+        "status": "article_text",
+        "source_url": "https://www.aptiv.com/en/insights/article/spot-coating-helps-ev-manufacturer-reduce-material-use-in-busbars",
+        "publisher_date": "2026-10-30",
+        "sponsored": false,
+        "method": "Web page retrieval",
+        "body_characters": 10359,
+        "coverage": "Accessible page text returned by Web page retrieval; may omit figures, tables, supplements or paywalled sections.",
+        "checked_at": "2026-11-03T20:18:07.105274+00:00",
+        "company": "Aptiv",
+        "linked_topics": [
+          "plating",
+          "battery"
+        ],
+        "source_class": "company_or_approved_partner",
+        "cleaner_version": "source-clean-v1",
+        "cleaning_notes": {
+          "removed_tail_headings": [
+            "Privacy Preference Center"
+          ]
+        }
+      },
+      "summary_details": {},
+      "first_seen": "2026-11-03 20:18:16",
+      "topics": [
+        "industry",
+        "plating",
+        "battery"
+      ],
+      "original_evidence": {
+        "abstract": "Aptiv's spot coating process applies protection only where needed, helping reduce material usage, chemical consumption and emissions in busbar manufacturing.",
+        "body_text": "Spot Coating Helps EV Manufacturer Reduce Material Use in Busbars\n\n# Spot Coating Helps EV Manufacturer Reduce Material Use in Busbars\n\nA North American electric vehicle manufacturer wanted to support large-scale production programs while reducing their environmental impact. One area of focus was busbars, a major component of high-voltage electrical architectures that transfers power to key vehicle systems.\n\nBusbars are long, solid metal conductors. To prevent corrosion, maintain stable electrical connections and ensure long-term durability, part of the manufacturing process is to apply a protective coating to the busbars.\n\nAptiv developed and optimized a spot coating process for busbar applications that eliminates water consumption and lowers emissions without compromising performance.\n\nManufacturers traditionally coat busbars through a rack coating process. During this process, they immerse each component in multiple chemical baths and use electricity to apply a uniform layer of nickel, tin or other protective material. Although effective, this process coats far more surface area than the application requires.\n\nMany busbar applications require protection only at the connection points where electrical contact occurs. When manufacturers coat the entire busbar, they increase material consumption and use significant amounts of water and energy. As vehicle programs scale into hundreds of thousands of units, the unnecessary coatings create a larger environmental impact.\n\n## A Breakthrough in Sustainable Manufacturing\n\nAptiv’s spot coating process applies protective material only where it is needed to overcome the limitations of traditional coating methods.\n\nThe process begins with sandblasting, which removes any existing oxidation and creates a rough contact surface. Then, the system feeds a coating material into an arc spray device, where an electric arc melts the material. Compressed air deposits the molten material onto specific areas of the busbar — targeting only the connection points.\n\nThis approach ensures corrosion resistance, contact stability and durability while significantly reducing resource consumption. Because the process eliminates chemical baths, it removes the water-intensive treatment stages associated with classic galvanization.\n\n# Traditional Rack Coating vs. Aptiv Spot Coating\n| | RACK COATING | APTIV SPOT COATING |\n\n| Pretreatment of Aluminum | Degreasing, rinsing, etching/pickling with NaOH or acidic pickling solution, neutralization, desmutting, activation, double zincate process | Sand blasting |\n| Nickel Layer | (Electrolytic plating) Nickel sulfate or nickel chloride, boric acid, organic additives | Spot coating |\n| Tin Layer | (Electrolytic plating) Tin sulfate, sulfuric acid, organic additives | Spot coating |\n| Post-Treatment | Multi-stage rinsing, optional passivization, drying | Not necessary |\n| Emission Intensity | 10.476 kg \\( \\text{CO}_2 \\text{eq/m}^2 \\) | 16.096 kg \\( \\text{CO}_2 \\text{eq/m}^2 \\) |\n\n| Major Impact | Coating material, chemicals like (NaOH, boric acid, HNO₃, sulfuric acid, additives etc.), energy and water consumption | Coating material, energy |\nA comparison of traditional rack coating and Aptiv’s spot coating process. Unlike traditional rack coating, which covers the entire busbar, Aptiv’s spot coating process applies nickel and tin only to connection areas, reducing the amount of coated surface throughout the product lifecycle.\n\n## Dramatic Results\n\nAptiv evaluated the impact of spot coating across two of the manufacturer’s electric vehicle programs, scheduled to run from 2026 through 2030. Across both programs, conventional rack coating would have required approximately 160,000 square meters of coated busbar surface. By coating only the areas required for electrical contact, Aptiv reduced the coated area to approximately 2,400 square meters.\n\nOver the lifetime of the programs, Aptiv’s approach reduces the coated surface area by 98 percent and has several substantial environmental benefits: It reduces CO2-equivalent emissions by 97 percent over the project lifetime; it eliminates process water consumption compared to traditional coating processes that can require 50 to 150 liters of water per square meter; and it reduces chemical usage by eliminating multiple chemical bath stages.\n\nAlthough spot coating generates a higher emissions intensity per square meter, the process dramatically reduces the amount of coated surface required. By applying protection only where it is needed, Aptiv developed a more resource-efficient solution that supports vehicle performance and sustainability goals.\n\n## Challenge\n\n- Protect high-voltage busbars from corrosion while maintaining long-term performance\n- Reduce environmental impact of traditional coating processes\n\nMinimize water consumption, chemical use and emissions\n\n## Solution\n\n- Optimized a spot coating process that applies material only to needed connection areas\n- Replaced chemical processes with sandblasting to prep the surface\n\nReplaced water-intensive galvanization with targeted arc spray\n\n## Results\n\n- Reduced coated surface area by 98%\n- Reduced total emissions by 97%\n- Eliminated process water consumption\n- Reduced chemical usage\n\nA North American electric vehicle manufacturer wanted to support large-scale production programs while reducing their environmental impact. One area of focus was busbars, a major component of high-voltage electrical architectures that transfers power to key vehicle systems.\n\nBusbars are long, solid metal conductors. To prevent corrosion, maintain stable electrical connections and ensure long-term durability, part of the manufacturing process is to apply a protective coating to the busbars.\n\nAptiv developed and optimized a spot coating process for busbar applications that eliminates water consumption and lowers emissions without compromising performance.\n\nManufacturers traditionally coat busbars through a rack coating process. During this process, they immerse each component in multiple chemical baths and use electricity to apply a uniform layer of nickel, tin or other protective material. Although effective, this process coats far more surface area than the application requires.\n\nMany busbar applications require protection only at the connection points where electrical contact occurs. When manufacturers coat the entire busbar, they increase material consumption and use significant amounts of water and energy. As vehicle programs scale into hundreds of thousands of units, the unnecessary coatings create a larger environmental impact.\n\n## A Breakthrough in Sustainable Manufacturing\n\nAptiv’s spot coating process applies protective material only where it is needed to overcome the limitations of traditional coating methods.\n\nThe process begins with sandblasting, which removes any existing oxidation and creates a rough contact surface. Then, the system feeds a coating material into an arc spray device, where an electric arc melts the material. Compressed air deposits the molten material onto specific areas of the busbar — targeting only the connection points.\n\nThis approach ensures corrosion resistance, contact stability and durability while significantly reducing resource consumption. Because the process eliminates chemical baths, it removes the water-intensive treatment stages associated with classic galvanization.\n\n# Traditional Rack Coating vs. Aptiv Spot Coating\n| | RACK COATING | APTIV SPOT COATING |\n\n| Pretreatment of Aluminum | Degreasing, rinsing, etching/pickling with NaOH or acidic pickling solution, neutralization, desmutting, activation, double zincate process | Sand blasting |\n| Nickel Layer | (Electrolytic plating) Nickel sulfate or nickel chloride, boric acid, organic additives | Spot coating |\n| Tin Layer | (Electrolytic plating) Tin sulfate, sulfuric acid, organic additives | Spot coating |\n| Post-Treatment | Multi-stage rinsing, optional passivization, drying | Not necessary |\n| Emission Intensity | 10.476 kg \\( \\text{CO}_2 \\text{eq/m}^2 \\) | 16.096 kg \\( \\text{CO}_2 \\text{eq/m}^2 \\) |\n\n| Major Impact | Coating material, chemicals like (NaOH, boric acid, HNO₃, sulfuric acid, additives etc.), energy and water consumption | Coating material, energy |\nA comparison of traditional rack coating and Aptiv’s spot coating process. Unlike traditional rack coating, which covers the entire busbar, Aptiv’s spot coating process applies nickel and tin only to connection areas, reducing the amount of coated surface throughout the product lifecycle.\n\n## Dramatic Results\n\nAptiv evaluated the impact of spot coating across two of the manufacturer’s electric vehicle programs, scheduled to run from 2026 through 2030. Across both programs, conventional rack coating would have required approximately 160,000 square meters of coated busbar surface. By coating only the areas required for electrical contact, Aptiv reduced the coated area to approximately 2,400 square meters.\n\nOver the lifetime of the programs, Aptiv’s approach reduces the coated surface area by 98 percent and has several substantial environmental benefits: It reduces CO2-equivalent emissions by 97 percent over the project lifetime; it eliminates process water consumption compared to traditional coating processes that can require 50 to 150 liters of water per square meter; and it reduces chemical usage by eliminating multiple chemical bath stages.\n\nAlthough spot coating generates a higher emissions intensity per square meter, the process dramatically reduces the amount of coated surface required. By applying protection only where it is needed, Aptiv developed a more resource-efficient solution that supports vehicle performance and sustainability goals.\n\n## Challenge\n\n- Protect high-voltage busbars from corrosion while maintaining long-term performance\n- Reduce environmental impact of traditional coating processes\n\nMinimize water consumption, chemical use and emissions\n\n## Solution\n\n- Optimized a spot coating process that applies material only to needed connection areas\n- Replaced chemical processes with sandblasting to prep the surface\n\nReplaced water-intensive galvanization with targeted arc spray\n\n## Results\n\n- Reduced coated surface area by 98%\n- Reduced total emissions by 97%\n- Eliminated process water consumption\n- Reduced chemical usage\n\n#### Careers\n\nShape the future of mobility. Join our team to help create vehicles that are safer, greener and more connected.\nView Related Jobs \n\n## Privacy Preference Center\n\nWhen you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. As we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more about cookies, and change default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.\n\nMore information\n\n### Manage Consent Preferences\n\n#### Performance Cookies\n\nThese cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.\n\n#### Functional Cookies\n\nThese cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.\n\n#### Targeting Cookies\n\nThese cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.\n\n#### Strictly Necessary Cookies\n\nAlways Active\n\nThese cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.\n\n### Vendors List\n\nlabel\n\nLeg.Interest\n\nlabel\n\nlabel\n\nlabel",
+        "claims": []
+      },
+      "source_aliases": [
+        {
+          "canonical_id": "e6c811a9393df99e33f9d221",
+          "id": "e6c811a9393df99e33f9d221",
+          "title": "Spot Coating Helps EV Manufacturer Reduce Material Use ...",
+          "url": "https://www.aptiv.com/en/insights/article/spot-coating-helps-ev-manufacturer-reduce-material-use-in-busbars",
+          "source_name": "www.aptiv.com"
+        }
+      ],
+      "previous_assessment": null
+    },
+    {
       "id": "5b1a200c49acf6281aeedbe4",
       "title": "CO2 capture in quaternary ionic liquid-propanol solutions: surface and bulk structures",
       "url": "https://doi.org/10.1016/j.chemphys.2026.113561",
@@ -44900,6 +45011,68 @@
   ],
   "runs": [
     {
+      "id": 42,
+      "started_at": "2026-11-03 20:24:23",
+      "finished_at": "2026-11-03 20:24:23",
+      "counts": {
+        "already_stored": 1,
+        "blocked_date": 1,
+        "blocked_fetch": 6,
+        "blocked_index_page": 1,
+        "blocked_nonarticle_path": 19,
+        "blocked_nontech": 4,
+        "blocked_sponsored": 2,
+        "blocked_unapproved_publisher": 67,
+        "research service_queries": 19,
+        "included": 1,
+        "mode": "industry_monthly",
+        "model_attempts": 4,
+        "model_rejected": 3,
+        "month_end": "2026-10-31",
+        "month_start": "2026-10-01",
+        "search_rows": 110,
+        "patent search service_queries": 13
+      },
+      "errors": [
+        "Amphenol: patent search service search failed (TimeoutError)",
+        "Amphenol: patent search service search failed (TimeoutError)",
+        "Foxconn Interconnect Technology: patent search service search failed (TimeoutError)",
+        "BizLink: patent search service search failed (TimeoutError)",
+        "Hirose Electric: patent search service search failed (TimeoutError)",
+        "Samtec: patent search service search failed (TimeoutError)"
+      ],
+      "token_usage": {
+        "research service_scoring": {
+          "completion_tokens": 1406,
+          "prompt_cache_hit_tokens": 2432,
+          "prompt_cache_miss_tokens": 7151,
+          "prompt_tokens": 9583,
+          "total_tokens": 10989
+        },
+        "research service_verification": {
+          "completion_tokens": 408,
+          "prompt_cache_hit_tokens": 3200,
+          "prompt_cache_miss_tokens": 460,
+          "prompt_tokens": 3660,
+          "total_tokens": 4068
+        },
+        "industry_enrichment": {
+          "completion_tokens": 550,
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 3070,
+          "prompt_tokens": 3198,
+          "total_tokens": 3748
+        },
+        "industry_monthly_digest": {
+          "completion_tokens": 530,
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 844,
+          "prompt_tokens": 844,
+          "total_tokens": 1374
+        }
+      }
+    },
+    {
       "id": 41,
       "started_at": "2026-11-03 18:59:23",
       "finished_at": "2026-11-03 18:59:23",
@@ -45296,44 +45469,6 @@
           "total_tokens": 33552
         }
       }
-    },
-    {
-      "id": 32,
-      "started_at": "2026-10-30 16:56:44",
-      "finished_at": "2026-10-30 16:56:44",
-      "counts": {
-        "briefs_generated": 8,
-        "cached": 310,
-        "candidates": 0,
-        "demoted_unverified_news": 0,
-        "errors": 0,
-        "fetched": 0,
-        "fetched_by_provider": {},
-        "included": 0,
-        "lookback_days": 14,
-        "mode": "score_pending",
-        "model_failures": 0,
-        "purged_unsuitable_sources": 0,
-        "scored": 0,
-        "unique_fetched": 0
-      },
-      "errors": [],
-      "token_usage": {
-        "research service_digest": {
-          "completion_tokens": 1888,
-          "prompt_cache_hit_tokens": 36736,
-          "prompt_cache_miss_tokens": 375,
-          "prompt_tokens": 37111,
-          "total_tokens": 38999
-        },
-        "research service_topic_digest": {
-          "completion_tokens": 4372,
-          "prompt_cache_hit_tokens": 28032,
-          "prompt_cache_miss_tokens": 1275,
-          "prompt_tokens": 29307,
-          "total_tokens": 33679
-        }
-      }
     }
   ],
   "weeks": [
@@ -45533,9 +45668,9 @@
     {
       "month_start": "2026-10-01",
       "month_end": "2026-10-31",
-      "synthesis_md": "## Technical developments\n\nRosenberger announced GFC® (Glass Fiber Connector), a fiber-optic connector system for in-vehicle data communication, positioned as a complement to coaxial and differential copper links as automotive bandwidth demand rises. The announcement states support for data rates above 50 Gbps over distances up to 40 meters and full IEEE 802.3cz compliance (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: a standards-aligned optical link at this rate/distance class gives automotive network designers a fiber option alongside copper for high-bandwidth in-vehicle segments, with protocol independence (Ethernet and PCIe-based applications cited) allowing reuse across link types.\n\nThe same announcement describes the system as developed for harsh automotive environments per ISO 24581, meeting mechanical and environmental requirements of ISO 8092 and DIN 70214, and having passed Arizona dust and water tests. It supports OM3 and OM4 multimode fiber at 850 nm and 980 nm and is offered as a straight cable plug, straight cable coupler, and angled PCB connector. Robustness is attributed in part to an Expanded-Beam Principle that enlarges the optically effective surface across the fiber transition to reduce dust/contaminant sensitivity and end-face wear (https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles).\n\nEngineering implication: the expanded-beam design and cited environmental qualifications target the contamination and durability concerns that have limited optical connectors in vehicle harnesses; the three form factors (plug, coupler, angled PCB connector) indicate provision for both cable-to-cable and board-level integration points.\n\n## Evidence gaps\n\nAll technical claims here rest on a single company announcement; no independent test reports, qualification certificates, or third-party verification of the >50 Gbps, 40 m, IEEE 802.3cz, ISO 24581, ISO 8092, DIN 70214, or dust/water results were supplied. The record gives no measured link margin, insertion-loss, temperature-range, vibration, or lifetime data, and no indication of production readiness or deployment. No other monitored interconnect company has a publisher-dated technical record in this set, so no cross-company comparison is possible; absence of records is not evidence of inactivity.",
-      "item_ids": "[\"965a5d574adc6673ce28081b\"]",
-      "generated_at": "2026-11-02 22:34:47"
+      "synthesis_md": "## Technical developments\n\nAptiv reported a spot-coating process for high-voltage EV busbars that deposits protective nickel and tin only at electrical connection points, replacing multi-bath electrolytic rack coating with sandblasting followed by arc spraying. Across two EV programs scheduled for 2026–2030, Aptiv reports coated surface area falling from roughly 160,000 m² to about 2,400 m² (98% reduction), a 97% reduction in CO2-equivalent emissions over project lifetime, and elimination of process water use; the article notes higher emissions intensity per square meter (16.096 vs 10.476 kg CO2 eq/m²) offset by the smaller coated area. Engineering implication: selective deposition could cut material, chemical, and water consumption in busbar manufacturing, though the figures are company-reported and not independently peer-reviewed. Source: https://www.aptiv.com/en/insights/article/spot-coating-helps-ev-manufacturer-reduce-material-use-in-busbars\n\nRosenberger announced GFC® (Glass Fiber Connector), an in-vehicle fiber-optic connector standard positioned as a complement to coaxial and differential copper links. The announcement states support for over 50 Gbps over up to 40 meters, full IEEE 802.3cz compliance, development for harsh automotive environments per ISO 24581, conformance to ISO 8092 and DIN 70214 mechanical/environmental requirements, and passing Arizona dust and water tests. It supports OM3/OM4 multimode fiber at 850 nm and 980 nm, is protocol-independent (Ethernet and PCIe cited), and is offered as straight cable plug, straight cable coupler, and angled PCB connector; robustness is attributed partly to an Expanded-Beam Principle enlarging the optically effective surface to reduce dust sensitivity and end-face wear. Engineering implication: a standardized optical option may address rising in-vehicle bandwidth needs where copper links become constrained. Source: https://rna.rosenberger.com/news-events/news/gfc-optical-connectivity-in-vehicles\n\n## Evidence gaps\n\nBoth records are single company announcements; no independent verification, qualification test reports, or third-party validation are supplied. Aptiv's environmental and material figures are self-reported and tied to programs scheduled for 2026–2030, so realized performance is unconfirmed. Rosenberger's performance and compliance claims are stated without published test data. No other monitored interconnect companies have publisher-dated technical records in this set, so no activity is inferred for them.",
+      "item_ids": "[\"e6c811a9393df99e33f9d221\", \"965a5d574adc6673ce28081b\"]",
+      "generated_at": "2026-11-03 20:24:23"
     },
     {
       "month_start": "2026-09-01",
@@ -45548,9 +45683,9 @@
   "stats": {
     "dropped_lowscore": 194,
     "dropped_no_evidence": 27,
-    "included": 261,
+    "included": 262,
     "out_of_scope": 609,
     "stale": 24
   },
-  "built_at": "2026-11-03T20:10:30.253907+00:00"
+  "built_at": "2026-11-03T20:25:13.869652+00:00"
 }
