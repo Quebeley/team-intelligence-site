@@ -10196,8 +10196,8 @@
       "filing_date": null,
       "content_kind": "full_text",
       "abstract": "",
-      "summary": null,
-      "why_it_matters": null,
+      "summary": "The paper addresses high-dimensional, constraint-bound selection of fiber laser welding parameters (laser power, welding speed, focus offset, wobbling conditions) for overlapped aluminum alloy sheets, where trial-and-error and gradient-based search are inefficient. The authors binarize design variables with an auxiliary 'used/unused' bit, encode practical constraints (alloy selection, parameter bounds, wobble mode/speed/amplitude consistency) as explicit equations, and convert a machine-learning joint-width predictor into a QUBO/Ising-type model via factorization machines (K=4, xLearn, AdaGrad) for search on the Fujitsu Digital Annealer. The Ising-type model matched the original ML model with a correlation coefficient of 0.992 on 20,000 test points. In reported experiments, the annealer-based search took 47.777 s versus 10,254.877 s for a random-sampling baseline on a workstation (about 214.64-fold reduction), and the derived conditions yielded a measured joint width of 2,931.0 µm versus 2,720.6 µm for the traditional method. The authors report good agreement between predicted and measured widths across target regions and a trend of increasing joint width with wobble amplitude.",
+      "why_it_matters": "The work shows a concrete route to embed manufacturability constraints directly into an Ising/QUBO formulation so that an annealer returns feasible welding parameter sets rather than infeasible optima, which is the prerequisite for using such solvers in process design or in-process control.",
       "relevance_score": 88.0,
       "quality_score": 80.0,
       "score_details": {
@@ -10272,7 +10272,20 @@
           ]
         }
       },
-      "summary_details": {},
+      "summary_details": {
+        "technical_points": [
+          "Design variables are binary-encoded with one auxiliary bit per variable indicating used/unused; e.g., laser power over 500–1500 W at 50 W steps uses 5 value bits plus 1 auxiliary bit (6 bits total).",
+          "Constraints are written as explicit equations: exactly one alloy per sheet (Eq. 5), parameter lower/upper bounds (Eq. 6), and wobble consistency coupling mode (2 bits for None/circular/figure-eight/linear), wobble speed, and wobble amplitude (Eqs. 7–9).",
+          "The ML joint-width model is converted to a QUBO via factorization machines (Eq. 11, K=4, xLearn, AdaGrad) using 100,000 virtual data points (80,000 train / 20,000 test); the Ising-type model correlated 0.992 with the original ML model on test data.",
+          "Reported search time was 47.777 s with the Fujitsu Digital Annealer versus 10,254.877 s for a 10-million-candidate random search on an Intel Xeon E-2136 workstation, a stated 214.64-fold reduction.",
+          "Experimental lap welding gave 2,931.0 µm joint width under annealer-derived conditions versus 2,720.6 µm under traditional-method conditions; the Ising-type model predicted 2,912.92 µm and the original ML model 2,686.62 µm for that condition."
+        ],
+        "limitations": [
+          "Results come from a single study by the authors; the baseline is a random-sampling search rather than a tuned alternative optimizer, so the reported speedup is specific to that comparison.",
+          "Only a limited set of validation cases and target joint widths is reported; no statistical replication, uncertainty analysis, or broad alloy/thickness matrix is described in the supplied text.",
+          "Figures, tables (including Table 1 parameter ranges and Table 2 full results) and supplementary material were not available in the retrieved text, so some quantitative details could not be independently checked."
+        ]
+      },
       "first_seen": "2026-11-16 12:53:01",
       "topics": [
         "joining"
@@ -69152,5 +69165,5 @@
     "out_of_scope": 930,
     "stale": 29
   },
-  "built_at": "2026-11-23T14:25:27.925679+00:00"
+  "built_at": "2026-11-23T15:07:02.053957+00:00"
 }
